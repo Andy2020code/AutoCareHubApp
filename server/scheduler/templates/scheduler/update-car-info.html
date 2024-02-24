@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/aad5qid.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'scheduler/css/update-car-info.css' %}">
+    <script src="{% static 'scheduler/js/update-car-info.js' %}"></script>
+    <title>Update Car Information | Auto Care Hub</title>
+</head>
+<body>
+
+    <form action="" method="post">
+        <div class="div-01-layout">
+            <div class="div-01-body">
+                <h1>Update Car Information</h1>
+                <p>Confirm Details</p>
+            </div>
+        </div>
+    
+        <div class="div-02-layout">
+            {% csrf_token %}
+    
+            <div class="div-02-body">
+    
+                <div class="title-div">
+                    <h1>{{ request.user.first_name}}'s Vehicle</h1>
+                </div>
+    
+                <div class="label-input">
+                    <label for="car-make">Car Make:</label>
+                    <input class="car-make-input" type="text" id="id_car_make" name="car_make" value="{{ car_info.car_make}}">
+                </div>
+    
+                <div class="label-input">
+                    <label for="car-model">Car Model:</label>
+                    <input class="car-model-input" type="text" id="id_car_model" name="car_model" value="{{ car_info.car_model}}">
+                </div>
+    
+                <div class="label-input">
+                    <label for="car-year">Car Year:</label>
+                    <input class="car-year-input" type="text" id="id_car_year" name="car_year" value="{{ car_info.car_year}}">
+                </div>
+
+                <div class="label-input">
+                    <label for="car-vin">Vin Number:</label>
+                    <input class="car-vin-input" type="text" id="id_car_vin" name="car_vin" value="{{ car_info.car_vin}}">
+                </div>
+    
+                <div class="submit-btn">
+                    <button type="submit">Update</button>
+                </div>
+                
+            </div>
+        </div>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'chatbot/css/index.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Index</title>
+</head>
+<body>
+
+    <form method="post" action="{% url 'chatbot:get_user_data' %}">
+        {% csrf_token %}
+        <div class="messages-container" id="messages-container">
+            <div class="div-01-layout">
+                <div class="div-01-body">
+        
+                    <div class="div-01-title">
+                        <h1>Wrench</h1>
+                    </div>
+        
+                    <div class="messages-div" id="messages-div">
+        
+    
+        
+                    </div>
+        
+                    <div class="user-input-div">
+                        <input name="user-input-box" id="user-input-box" class="user-input-box" placeholder="Ask Here..." type="text">
+                        <button type="submit" id="send-btn" class="send-btn">Send</button>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script src="{% static 'chatbot/js/index.js' %}"></script>
+    <script src="{% static 'chatbot/js/index_style.js' %}"></script>
+</body>
+</html>

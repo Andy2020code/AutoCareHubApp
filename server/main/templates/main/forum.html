@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/main/css/forum.css">
+    <title>Forum</title>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' >Menu</i>
+            <span class="logo navLogo"><a href="/home">Auto Care Hub</a></span>
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="/home">Auto Care Hub</a></span>
+                    <i class='bx bx-x siderbarClose'>Close</i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="{% url 'main:home' %}">Home</a></li>
+                    <li><a href="{% url 'main:about' %}">About</a></li>
+                    <li><a href="{% url 'main:how_it_works' %}">How It Works</a></li>
+                    <li><a href="{% url 'main:forum' %}">Forum</a></li>
+                    <li><a href="{% url 'main:sign-up' %}">SignUp</a></li>
+                </ul>
+            </div>
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        const body = document.querySelector("body"),
+            nav = document.querySelector("nav"),
+            modeToggle = document.querySelector(".dark-light"),
+            searchToggle = document.querySelector(".searchToggle"),
+            sidebarOpen = document.querySelector(".sidebarOpen"),
+            siderbarClose = document.querySelector(".siderbarClose");
+            let getMode = localStorage.getItem("mode");
+                if(getMode && getMode === "dark-mode"){
+                body.classList.add("dark");
+            }
+                // js code to toggle dark and light mode
+                modeToggle.addEventListener("click" , () =>{
+                modeToggle.classList.toggle("active");
+                body.classList.toggle("dark");
+                // js code to keep user selected mode even page refresh or file reopen
+                if(!body.classList.contains("dark")){
+                    localStorage.setItem("mode" , "light-mode");
+                }else{
+                    localStorage.setItem("mode" , "dark-mode");
+                }
+            });
+                // js code to toggle search box
+                searchToggle.addEventListener("click" , () =>{
+                searchToggle.classList.toggle("active");
+            });
+ 
+      
+                //   js code to toggle sidebar
+                sidebarOpen.addEventListener("click" , () =>{
+                nav.classList.add("active");
+            });
+                body.addEventListener("click" , e =>{
+                let clickedElm = e.target;
+                if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+                    nav.classList.remove("active");
+                }
+            });
+    </script>
+
+    <section class="header">
+
+        <div class="header-text">
+            <h1 class="header-title">Forum</h1>
+        </div>
+
+    </section>
+
+
+
+
+    <div class="div-01-layout">
+        <div class="create-post-div">
+            <a href="/create-post"><button>Create Post</button></a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    {% for post in posts %}
+    <div class="post-container">
+        <h1 class="post-title">{{ post.title }}</h1>
+        <p class="post-author">Posted by: {{ post.author.username }}</p>
+        <div class="post-content">
+            <p>{{ post.description }}</p>
+            <!-- Add more content as needed -->
+        </div>
+        <p class="post-date">Posted on: {{post.created_at}}</p>
+
+        {% if user.is_authenticated and user == post.author %}
+            <form action="{% url 'delete_post' post.id %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" class="delete-post-btn">DELETE POST</button>
+            </form>
+        {% endif %}
+    </div>
+    {% endfor %}
+
+    
+
+
+    
+</body>
+</html>

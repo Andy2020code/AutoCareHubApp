@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/results.css' %}">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="div-01-layout">
+        <div class="div-01-body">
+
+            <div class="tfp">
+                <h1>Thank you for voting!</h1>
+            </div>
+
+            <div class="description_01">
+                <p>Sincere thanks to all who left their vote. Your input plays a crucial role in shaping our decisions and also demonstrates the power of collective action.</p>
+            </div>
+
+            <div class="call-to-action-btn">
+                <a href="https://silvaroute.com"><button>Learn About Us</button></a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="div-02-layout">
+        <div class="div-02-body">
+
+            <div class="pr">
+                <h1>Poll Results</h1>
+            </div>
+            {% for choice in question.choice_set.all %}
+                <div class="poll_results">
+                    <h1 class="bullet-point">{{ choice.choice_text }} - <span class="vote-count">{{ choice.votes }} vote{{ choice.votes|pluralize }}</span></h1>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+    
+</body>
+</html>

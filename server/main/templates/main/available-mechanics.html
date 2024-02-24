@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Marketplace | Mechannics</title>
+</head>
+<body>
+
+    <div class="intro-div-layout">
+        
+        <div class="intro-div-body">
+            <div class="title-intro">
+                <h1>Auto Care Hub<br>Mechanics</h1>
+                <p>Find the best mechanics in your area</p>
+            </div>
+
+            <div class="about-specs">
+
+                <div class="spec_card card-05">
+                    <img class="specs-img" src="../static/main/IMG/intro-page-available-mechanics/certified.png" alt="">
+                    <p>Certified Mechanics</p>
+                </div>
+
+                <div class="spec_card card-06">
+                    <img class="specs-img" src="../static/main/IMG/intro-page-available-mechanics/appreciation.png" alt="">
+                    <p>Top Customer Service</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="div-01-layout">
+        <div class="card card-01">
+            <div class="map-div"><p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.9278767325727!2d-84.50068372279813!3d33.94298307319839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f513df0d1ad7b7%3A0x86a5a459773f1d76!2s377%20Virginia%20Pl%20SE%2C%20Marietta%2C%20GA%2030067!5e0!3m2!1sen!2sus!4v1706467679398!5m2!1sen!2sus" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p></div>
+
+
+            <div class="mechanic-name">
+                <h1>Alainas Auto Mechanic</h1>
+                <p class="rating">Rating: - out of <span class="higlight-review">10</span></p>
+
+                <p>Certified Mechanic</p>
+
+                <a href="/about-mechanic"><button class="go-btn">See More</button></a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+<style>
+
+.div-01-layout{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 900px;
+    height: 300px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.map-div{
+    width: 300px;
+    height: 200px;
+    position: relative;
+    bottom: 65px;
+
+}
+
+.mechanic-name{
+    width: 400px;
+    height: 100%;
+}
+
+.mechanic-name h1{
+    font-size: 30px;
+    font-weight: 500;
+    color: #333;
+}
+
+.higlight-review{
+    color: #8b2635;
+}
+
+.go-btn{
+    width: 150px;
+    height: 40px;
+    background-color: #8b2635;
+    border: none;
+    border-radius: 5px;
+    color: #f5f5f5;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.go-btn:hover{
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #8b2635;
+    color: #8b2635;
+    position: relative;
+    top: 5px;
+}
+
+@media (max-width: 500px) {
+    .card{
+    width: 350px;
+    height: 550px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-div{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    bottom: 5px;
+
+}
+
+.mechanic-name{
+    width: 300px;
+    height: auto;
+}
+}
+
+.intro-div-layout{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.intro-div-body{
+    width:100%;
+    height: auto;
+
+}
+
+.title-intro h1{
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 300;
+}
+
+.title-intro p{
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.about-specs{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spec_card{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.spec_card p{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.specs-img{
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+</style>
+    
+</body>
+</html>

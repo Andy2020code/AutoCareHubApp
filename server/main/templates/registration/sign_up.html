@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/main/css/sign_up.css">
+    <title>SignUp</title>
+</head>
+<body>
+
+    <div class="div-01-layout">
+        <div class="div-01-body">
+
+            <div class="left-div-01">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    
+                    <div class="username-div">
+                        <label for="username">Username</label>
+                        <input type="username" class="username" name="username" placeholder="enter your username...">
+                    </div>
+                   
+                    <div class="email-div">
+                        <label for="email">Email</label>
+                        <input type="email" class="email" name="email" placeholder="enter your email...">
+                    </div>
+                    
+                    <div class="password-01-div">
+                        <label for="password">Password</label>
+                        <input type="password" class="password" name="password1" placeholder="enter your password...">
+                    </div>
+
+                    <div class="password-confirmation-div">
+                        <label for="password-condirmation">Confirm Password</label>
+                        <input type="password" class="password" name="password2" placeholder="confirm your password...">
+                    </div>
+                
+                    <button type="submit" class="signup-btn">Sign UP</button>
+                </form>
+            </div>
+
+            <div class="right-div-01">
+                <h1>Have an account? <br>
+                    <a href="/login">Login</a> Here!</h1>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

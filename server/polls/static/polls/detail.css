@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.div-01-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.div-01-body {
+    min-width: 300px;
+    max-width: 1024px;
+    width: 90%;
+    height: auto;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-title {
+    width: 100%;
+    height: auto;
+    margin: 5px 0px;            
+}
+
+.question-title h1 {
+    width: 100%;
+    height: auto;
+    font-size: 36px;
+    font-family: "Montserrat",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Avenir,"Helvetica-Neue","Helvetica","Arial",sans-serif;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.alert-message {
+    width: 100%;
+    height: auto;
+}
+
+.label-input {
+    width: 90%;
+    min-height: 70px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 10px 0;
+}
+
+.label-font{
+    font-family: "Montserrat",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Avenir,"Helvetica-Neue","Helvetica","Arial",sans-serif;
+    font-size: 20px;
+}
+
+.vote-btn{
+    width: 150px;
+    height: 40px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #8b2635;;
+    color: #fff;
+    font-size: 20px;
+    margin: 20px 0px;
+    transition: .3s ease-in-out;
+}
+
+.vote-btn:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #444;
+}
+
+
+
+
+
+
+
+
+
+.choice {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+  
+/* Hide the default radio button */
+.choice input[type="radio"] {
+    display: none;
+}
+  
+
+.choice input[type="radio"] + label {
+    position: relative;
+    display: inline-block;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+  
+
+.choice input[type="radio"] + label::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: background-color 0.3s ease;
+}
+  
+  
+.choice input[type="radio"]:checked + label::before {
+    background-color: #8b2635;
+}
+  
+
+.choice input[type="radio"]:checked + label {
+    font-family: "Montserrat",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Avenir,"Helvetica-Neue","Helvetica","Arial",sans-serif;
+    font-weight: bold;
+    color: #8b2635;
+}

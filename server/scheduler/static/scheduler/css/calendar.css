@@ -1,0 +1,104 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-layout{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.header-body{
+  width: 350px;
+  height: auto;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);
+  padding: 10px 0px;
+}
+
+.header-body h1{
+  font-size: 36px;
+  color: #8b2635;
+  text-align: center;
+  font-family: "bebas-neue", sans-serif;
+  font-weight: 400;
+  margin: 10px 0px;
+}
+
+.header-body p{
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  margin: 10px 0px;
+}
+
+
+
+.calendar {
+  max-width: 350px;
+  margin: 0 auto;
+  font-family: 'bebas neue', sans-serif;
+}
+
+.header{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h2{
+  font-family: 'bebas neue', sans-serif;
+  font-size: 36px;
+  color: #8b2635;
+  font-weight: 400;
+  margin: 20px 10px;
+}
+
+.header button{
+  width: auto;
+  height: auto;
+  padding: 10px 20px;
+  background-color: #8b2635;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+
+#month-year {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+
+.day {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #8b2635;
+}
+
+.day.selected {
+  background-color: green;
+  color: #fff;
+}
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/aad5qid.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'scheduler/css/calendar.css' %}">
+    {% load static %}
+    <script src="{% static 'scheduler/js/calendar.js' %}"></script>
+    <title>Calendar</title>
+</head>
+<body>
+
+  <div class="header-layout">
+    <div class="header-body">
+      <h1>Step 01</h1>
+      <p>Choose a date bellow:</p>
+    </div>
+  </div>
+
+<div class="calendar">
+
+  <div class="header">
+    <button id="prev">Prev</button>
+    <h2 id="month-year"></h2>
+    <button id="next">Next</button>
+  </div>
+
+  <div class="days" id="calendar-days"></div>
+
+</div>
+
+  
+
+</body>
+</html>

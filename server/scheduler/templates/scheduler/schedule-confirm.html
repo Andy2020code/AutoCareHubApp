@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/aad5qid.css">
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'scheduler/css/schedule-confirm.css' %}">
+    <script src="{% static 'scheduler/js/schedule-confirm.js' %}"></script>
+    <title>Schele Success | Auto Care hub</title>
+</head>
+<body>
+
+    <div class="div-01-layout">
+        <div class="div-01-body">
+            <h1>Awesome!</h1>
+            <p>Appointment Confirmed</p>
+        </div>
+    </div>
+
+    <div class="div-02-layout">
+        <div class="div-02-body">
+
+            <div class="info-div-layout">
+                <h1 class="info-div-title">Date:</h1>
+                <p class="info-div-content">{{ event.date }}</p>
+            </div>
+
+            <div class="info-div-layout">
+                <h1 class="info-div-title">Time Selected:</h1>
+                <p class="info-div-content">{{ event.desired_time }}</p>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <div class="div-03-layout">
+        <div class="div-03-body">
+            <a href="{% url 'main:user-home' %}"><button class="return-btn">Return Home</button></a>
+        </div>
+    </div>
+    
+</body>
+</html>

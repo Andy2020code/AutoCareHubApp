@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: */admin/*
+Disallow: *.png
+Disallow: *.jpeg
+Disalow: */IMG/
+Disalow: */static/
+Allow: /templates/

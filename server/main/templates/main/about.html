@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/main/css/about.css">
+    <title>Blog | Auto Care Hub</title>
+</head>
+<body> 
+
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' >Menu</i>
+            <span class="logo navLogo"><a href="/home">Auto Care Hub</a></span>
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="/home">Auto Care Hub</a></span>
+                    <i class='bx bx-x siderbarClose'>Close</i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="{% url 'main:home' %}">Home</a></li>
+                    <li><a href="{% url 'main:about' %}">About</a></li>
+                    <li><a href="{% url 'main:how_it_works' %}">How It Works</a></li>
+                    <li><a href="{% url 'main:forum' %}">Forum</a></li>
+                    <li><a href="{% url 'main:sign-up' %}">SignUp</a></li>
+                </ul>
+            </div>
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        const body = document.querySelector("body"),
+            nav = document.querySelector("nav"),
+            modeToggle = document.querySelector(".dark-light"),
+            searchToggle = document.querySelector(".searchToggle"),
+            sidebarOpen = document.querySelector(".sidebarOpen"),
+            siderbarClose = document.querySelector(".siderbarClose");
+            let getMode = localStorage.getItem("mode");
+                if(getMode && getMode === "dark-mode"){
+                body.classList.add("dark");
+            }
+                // js code to toggle dark and light mode
+                modeToggle.addEventListener("click" , () =>{
+                modeToggle.classList.toggle("active");
+                body.classList.toggle("dark");
+                // js code to keep user selected mode even page refresh or file reopen
+                if(!body.classList.contains("dark")){
+                    localStorage.setItem("mode" , "light-mode");
+                }else{
+                    localStorage.setItem("mode" , "dark-mode");
+                }
+            });
+                // js code to toggle search box
+                searchToggle.addEventListener("click" , () =>{
+                searchToggle.classList.toggle("active");
+            });
+ 
+      
+                //   js code to toggle sidebar
+                sidebarOpen.addEventListener("click" , () =>{
+                nav.classList.add("active");
+            });
+                body.addEventListener("click" , e =>{
+                let clickedElm = e.target;
+                if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+                    nav.classList.remove("active");
+                }
+            });
+    </script>
+
+
+    <section class="header">
+
+        <div class="header-text">
+            <h1 class="header-title">Blog</h1>
+        </div>
+
+    </section>
+
+    
+    <div class="div-01-layout">
+
+        <div class="div-01-body">
+
+            <div class="div-title">
+                <h1 class="div-01-title">Signup for our<br><span class="news-span">NEWSLETTER</span></h1>
+            </div>
+
+            <div class="devider-01"></div>
+
+            <div class="div-01-content">
+                <p>Stay up to date with the latest news and updates from Auto Hub Care.</p>
+                <input type="email" class="email-input" id="email" name="newsletter-email" placeholder="Enter your E-mail...">
+                <button class="email-button">Subscribe</button>
+            </div>
+        </div>
+    </div>
+
+
+<style>
+.div-01-layout{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+    background-color: #f44336;
+    padding: 20px 0px;
+}
+
+.div-01-body{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.div-title{
+    width: auto;
+    height: 90%;
+}
+
+.div-01-title{
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
+}
+
+.news-span{
+    font-size: 65px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 100;
+    color: #000;
+}
+
+.devider-01{
+    width: 200px;
+    height: 1px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    margin: 20px 0px;
+}
+
+.div-01-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-01-content p{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #fff;
+    margin: 20px 0px;
+}
+
+.email-input{
+    width: 300px;
+    height: 30px;
+    padding: 5px;
+    margin: 20px 0px;
+    border: 0px;
+}
+
+.email-button{
+    width: 150px;
+    height: 35px;
+    background-color: #fff;
+    border: 0px;
+    border-radius: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.email-button:hover{
+    cursor: pointer;
+    background-color: #f44336;
+    border: 1px solid #fff;
+    color: #fff;
+}
+</style>
+
+
+    <div class="div-02-layout">
+        <div class="div-02-body">
+            <h1 class="title-div-02">What is Auto Care Hub?</h1>
+            <p class="content-01"><span class="red-highlighted">Auto Care Hub</span> serves as a comprehensive digital ecosystem, offering a streamlined approach to car care. From locating certified mechanics to evaluating service ratings, facilitating bookings, managing maintenance history, to fostering a community through insightful forums – AutoCare Hub integrates every facet of automotive service into a singular, efficient platform.</p>
+        </div>
+    </div>
+
+<style>
+.div-02-layout{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.div-02-body{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.title-div-02{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: #8b2635;
+    margin: 20px 0px;
+}
+
+.content-01{
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    color: #000;
+    margin: 20px 0px;
+}
+
+.red-highlighted{
+    font-family: 'Bebas Neue', sans-serif;
+    color: #8b2635;
+}
+</style>
+
+</body>
+</html>

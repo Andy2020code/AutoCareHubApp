@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ event.title }}</title>
+</head>
+<body>
+    <h1>{{ event.title }}</h1>
+    <p><strong>Description:</strong> {{ event.description }}</p>
+    <p><strong>Start Time:</strong> {{ event.start_time }}</p>
+    <p><strong>End Time:</strong> {{ event.end_time }}</p>
+    <p><strong>User:</strong> {{ event.user }}</p>
+    <a href="{% url 'event_update' event.id %}">Edit</a>
+    <a href="{% url 'event_delete' event.id %}">Delete</a>
+</body>
+</html>

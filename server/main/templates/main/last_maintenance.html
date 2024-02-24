@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Update | Upcoming Maintenance</title>
+</head>
+<body>
+
+
+
+    
+
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="div-01-layout">
+        <div class="div-01-body">
+
+            <label for="last-service" id="service-label">What was your last service for?</label>
+            <input type="text" name="last_service_requested" maxlength="100" required="" aria-invalid="true" id="id_last_service_requested" placeholder="'Oil Change'">
+
+
+            <label for="last-service" id="service-label">When did you get it done?</label>
+            <input type="date" name="date_of_service" required="" aria-invalid="true" id="id_date_of_service" placeholder="MM/DD/YYYY">
+
+
+            <button class="submit-btn" type="submit">Submit</button>
+        </div>
+    </div>
+</form>
+
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.div-01-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.div-01-body {
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.labe-input{
+    width: 100%;
+}
+
+#id_last_service_requested{
+    width: 300px;
+    height: 30px;
+    padding: 0px 10px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 0px;
+    color: #8b2635;
+}
+
+#id_date_of_service{
+    width: 300px;
+    height: 30px;
+    padding: 0px 10px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 0px;
+    color: #8b2635;
+}
+
+#service-label{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 10px 0px;
+}
+
+.submit-btn{
+    width: 150px;
+    height: 40px;
+    background-color: #8b2635;
+    border-radius: 5px;
+    border: none;
+    color: #f5f5f5;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 20px 0px;
+}
+
+.submit-btn:hover{
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #8b2635;
+    color: #8b2635;
+    position: relative;
+    top: 5px;
+}
+</style>
+</body>
+</html>

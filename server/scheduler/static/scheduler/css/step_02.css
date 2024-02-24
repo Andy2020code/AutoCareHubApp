@@ -1,0 +1,375 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.div-01-layout {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-01-header {
+    width: 350px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.step2{
+    color: #333;
+}
+
+.header-title {
+    width: 90%;
+    color: #8b2635;
+    text-align: center;
+    font-family: "bebas-neue", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+}
+
+.info-div-layout{
+    width: 95%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 25px;
+    border-bottom: 1px solid #8b2635;
+    padding-bottom: 5px;
+}
+
+.info-div-title{
+    font-size: 20px;
+    color: #333;
+    font-family: "bebas-neue", sans-serif;
+    color: #8b2635;
+    font-weight: 400;
+}
+
+.info-div-content{
+    font-size: 18px;
+    font-family: 'Rajdani', sans-serif;
+    font-weight: 300px;
+}
+
+.div-01-body {
+    width: 350px;
+    height: auto;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0px;
+}
+
+.warning-message{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    margin: 20px 0px;
+}
+
+.warning-message-body{
+    width: 300px;
+    height: auto;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.warning-message-body h1{
+    text-align: center;
+    color: #8b2635;
+    font-size: 18px;
+    font-family: "bebas-neue", sans-serif;
+    font-weight: 400;
+    margin: 10px 0px;
+}
+
+.car-info-layout{
+    width: 350px;
+    height: auto;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    margin: 20px 0px;
+}
+
+.info-div-body{
+    width: 85%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0px;
+    border-bottom: 1px solid #8b2635;
+    padding-bottom: 0px;
+}
+
+.info-div-title{
+    font-size: 20px;
+    color: #333;
+    font-family: "bebas-neue", sans-serif;
+    color: #8b2635;
+    font-weight: 400;
+}
+
+.info-div-content{
+    font-size: 18px;
+    font-family: 'Rajdani', sans-serif;
+    font-weight: 300px;
+}
+
+.update-car-info-div{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.update-car-info-div button{
+    width: 150px;
+    height: 40px;
+    background-color: #8b2635;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.update-car-info-div button:hover{
+    background-color: #f5f5f5;
+    color: #8b2635;
+    border: 1px solid #8b2635;
+    position: relative;
+    bottom: -10px;
+}
+
+.label-input {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+}
+
+.label-input label {
+    color: #8b2635;
+    font-size: 18px;
+    font-family: "bebas-neue", sans-serif;
+    font-weight: 400;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.label-input input{
+    width: 96%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    margin: 0px auto;
+}
+.label-input select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    margin: 0px auto;
+}
+
+.submit-btn {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.submit-btn button {
+    width: 150px;
+    height: 40px;
+    background-color: #8b2635;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.submit-btn button:hover {
+    background-color: #f5f5f5;
+    color: #8b2635;
+    border: 1px solid #8b2635;
+    position: relative;
+    bottom: -10px;
+}
+
+.price-info-layout{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+}
+  
+.price-info-body{
+    width: 350px;
+    height: auto;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px 0px;
+    margin: 0px auto;
+}
+
+.collapsible {
+    width: 95%;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+  
+.title {
+    font-size: 19px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+    background-color: #8b2635;
+    color: #f5f5f5;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+  
+.arrow {
+    float: right;
+    transition: transform 0.3s;
+}
+  
+.content {
+    display: none;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+
+.content p{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+}
+  
+.collapsible_02 {
+    width: 95%;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+  
+.title_02 {
+    font-size: 19px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+    background-color: #8b2635;
+    color: #f5f5f5;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+  
+.arrow_02 {
+    float: right;
+    transition: transform 0.3s;
+}
+  
+.content_02 {
+    display: none;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+
+.content_02 p{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+}
+
+.collapsible_03 {
+    width: 95%;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+  
+.title_03 {
+    font-size: 19px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+    background-color: #8b2635;
+    color: #f5f5f5;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+  
+.arrow_03 {
+    float: right;
+    transition: transform 0.3s;
+}
+  
+.content_03 {
+    display: none;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin: 10px 0px;
+    transition: 1s ease-in-out;
+}
+
+.content_0 p{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+}
+  
+  

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/aad5qid.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'scheduler/css/step_02.css' %}">
+    <script src="{% static 'scheduler/js/step_02.js' %}"></script>
+    <title>Step 02</title>
+</head>
+<body>
+
+    <div class="div-01-layout">
+
+        <div class="div-01-header">
+            <h1 class='header-title'><span class='step2'>Step 2</span>: Select Date, Time, and Service <span class='step2'>Needed</span></h1>
+        </div>
+
+        <div class="div-01-header">
+            <div class="info-div-layout">
+                <h1 class="info-div-title">User:</h1>
+                <p class="info-div-content">{{ requester.first_name }} {{ requester.last_name }}</p>
+            </div>
+        </div>
+
+        <div class="car-info-layout">
+            <div class="info-div-body">
+                <h1 class="info-div-title">Car Make:</h1>
+                <p class="info-div-content">{{ user_car_info.car_make }}</p>
+            </div>
+
+            <div class="info-div-body">
+                <h1 class="info-div-title">Car Model:</h1>
+                <p class="info-div-content">{{ user_car_info.car_model }}</p>
+            </div>
+
+            <div class="info-div-body">
+                <h1 class="info-div-title">Car Year:</h1>
+                <p class="info-div-content">{{ user_car_info.car_year }}</p>
+            </div>
+
+            <div class="info-div-body">
+                <h1 class="info-div-title">Vin:</h1>
+                <p class="info-div-content">{{ user_car_info.car_vin }}</p>
+            </div>
+
+            <div class="update-car-info-div">
+                <a href="{% url 'scheduler:update_car_info' %}"><button>Update Car Info</button></a>
+            </div>
+        </div>
+
+        <form action="" method="post" id="step2Form">
+            {% csrf_token %}
+            <div class="div-01-body">
+    
+                <div class="warning-message">
+                    <div class="warning-message-body">
+                        {% if warning_message %}
+                        <h1 class="message">{{ warning_message }}</h1>
+                        {% endif %}
+                    </div>
+                </div>
+    
+                <div class="label-input">
+                    <label for="selected-date">Selected Date:</label>
+                    <input class="selected-date-input" type="text" id="id_date" name="date">
+                </div>
+        
+                <div class="label-input">
+                    <label for="desired-time">Desired Service Time:</label>
+                    <select id="id_desired_time" name='desired_time'>
+                        <option value="09:00">09:00 AM</option>
+                        <option value="09:30">09:30 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="10:30">10:30 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="11:30">11:30 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="12:30">12:30 PM</option>
+                        <option value="13:00">01:00 PM</option>
+                        <option value="13:30">01:30 PM</option>
+                        <option value="14:00">02:00 PM</option>
+                        <option value="14:30">02:30 PM</option>
+                        <option value="15:00">03:00 PM</option>
+                        <option value="15:30">03:30 PM</option>
+                        <option value="16:00">04:00 PM</option>
+                        <option value="16:30">04:30 PM</option>
+                        <option value="17:00">05:00 PM</option>
+                        <option value="17:30">05:30 PM</option>
+                        <option value="18:00">06:00 PM</option>
+                    </select>
+                </div>
+    
+                <div class="label-input">
+                    <label for="desired-service">Service Needed:</label>
+                    <select id="id_service_desired" name='service_desired'>
+                        <option value="Alternator Repair">Alternator Repair</option>
+                        <option value="Brake Pads Repair">Brake Pads Repair</option>
+                        <option value="Check Engine Light">Check Engine Light</option>
+                        <option value="Diagnostics">Diagnostics</option>
+                        <option value="Engine Repair">Engine Repair</option>
+                        <option value="Exhaust Repair">Exhaust Repair</option>
+                        <option value="Fuel Pump Replacement">Fuel Pump Replacement</option>
+                        <option value="Heating & A/C">Heating & A/C</option>
+                        <option value="Oil Change And Filter">Oil Change And Filter</option>
+                        <option value="Preventative Maintenance">Preventative Maintenance</option>
+                        <option value="Shocks & Struts">Shocks & Struts</option>
+                        <option value="Timing Belt Replacement">Timing Belt Replacement</option>
+                        <option value="Transmission Repair">Transmission Repair</option>
+                        <option value="Tune ups Repair">Tune ups Repair</option>
+                    </select>
+                </div>
+    
+                <div class="label-input">
+                    <label for="street_address">Street Address:</label>
+                    <input type="text" id="id_street_address" name="street_address" placehoder='i.e. 123 Main st'>
+                </div>
+    
+                <div class="label-input">
+                    <label for="zip_code">Zip Code:</label>
+                    <input type="number" id="id_zip_code" name="zip_code" placehoder='i.e. 30303'>
+                </div>
+    
+                <div class="label-input">
+                    <label for="city">City:</label>
+                    <select id="id_city" name='city'>
+                        <option value="Atlanta">Atlanta</option>
+                    </select>
+                </div>
+    
+                <div class="label-input">
+                    <label for="state">State:</label>
+                    <select id="id_state" name='state'>
+                        <option value="GA">GA</option>
+                    </select>
+                </div>
+        
+                <div class="submit-btn">
+                    <button type="submit">Submit</button>
+                </div>
+    
+            </div>
+        </form>
+    </div>
+
+    <div class="price-info-layout">
+        <div class="price-info-body">
+            <div class="collapsible">
+                <div class="title">Is it more expensive than going to the body/mechanic shop? <span class="arrow_02">&#9660;</span></div>
+                <div class="content">
+                  <p>Not necessarily! Our mobile mechanic service offers competitive rates without the overhead costs of traditional shops. We prioritize customer satisfaction and eco-friendly practices while providing transparent pricing. Choosing us ensures convenience, personalized service, and environmental benefits, often outweighing any potential cost differences.</p>
+                </div>
+            </div>
+
+            <div class="collapsible_02">
+                <div class="title_02">What sets us appart<span class="arrow_02">&#9660;</span></div>
+                <div class="content_02">
+                  <p>What sets us apart is our commitment to eco-friendly practices. We prioritize sustainability by using environmentally-friendly products and implementing green initiatives throughout our operations. By choosing us, you're not only supporting a local business but also contributing to a cleaner and greener future.</p>
+                </div>
+            </div>
+
+            <div class="collapsible_03">
+                <div class="title_03">What should I expect?<span class="arrow_03">&#9660;</span></div>
+                <div class="content_03">
+                  <p>At Auto Care Hub, your satisfaction is our top priority. We look forward to exceed your expectations by delivering reliable and efficient service, specific to your needs. Experience the difference of working with a local, eco-friendly auto repair company committed to your satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

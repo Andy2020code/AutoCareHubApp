@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/aad5qid.css">
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'scheduler/css/step_03.css' %}">
+    <script src="{% static 'scheduler/js/step_03.js' %}"></script>
+    <title>Step 03</title>
+</head>
+<body>
+
+    <div class="div-01-layout">
+        <div class="div-01-body">
+            <h1>Step 03</h1>
+            <p>Confirm Details</p>
+        </div>
+    </div>
+
+    <div class="div-02-layout">
+        {% csrf_token %}
+
+        <div class="div-02-body">
+
+            {% if latest_event %}
+            <div class="title-div">
+                <h1>Service Requested</h1>
+            </div>
+
+            <div class="info-div-layout">
+                <h1 class="info-div-title">Date:</h1>
+                <p class="info-div-content">{{ latest_event.date }}</p>
+            </div>
+
+            <div class="info-div-layout">
+                <h1 class="info-div-title">Time:</h1>
+                <p class="info-div-content">{{ latest_event.desired_time }}</p>
+            </div>
+
+            <div class="info-div-layout">
+                <h1 class="info-div-title">Service Selected:</h1>
+                <p class="info-div-content">{{ latest_event.service_desired }}</p>
+            </div>
+            {% endif %}
+            
+        </div>
+
+        <div class="div-02-body">
+
+            {% if latest_event %}
+            <div class="title-div">
+                <h1>To:</h1>
+            </div>
+
+            <div class="info-div-layout">
+                <h1 class="info-div-title">To:</h1>
+                <p class="info-div-content">{{ latest_event.user.first_name }} {{ latest_event.user.last_name }}</p>
+            </div>
+
+            <div class="info-div-layout">
+                <h1 class="info-div-title">Address:</h1>
+                <p class="info-div-content">{{ latest_event.street_address }}</p>
+            </div>
+
+            <div class="info-div-layout">
+                <h1 class="info-div-title">City:</h1>
+                <p class="info-div-content">{{ latest_event.city }}</p>
+            </div>
+
+            <div class="info-div-layout">
+                <h1 class="info-div-title">State:</h1>
+                <p class="info-div-content">{{ latest_event.state }}</p>
+            </div>
+
+            <div class="info-div-layout">
+                <h1 class="info-div-title">Zip Code:</h1>
+                <p class="info-div-content">{{ latest_event.zip_code }}</p>
+            </div>
+            {% endif %}
+            
+        </div>
+
+        <div class="div-02-body">
+
+            <div class="title-div">
+                <h1>Servicing Vehicle:</h1>
+            </div>
+
+            <div class="info-div-layout">
+                <h1 class="info-div-title">Make:</h1>
+                <p class="info-div-content">{{ car_info.car_make }}</p>
+            </div>
+
+            <div class="info-div-layout">
+                <h1 class="info-div-title">Model:</h1>
+                <p class="info-div-content">{{ car_info.car_model }}</p>
+            </div>
+
+            <div class="info-div-layout">
+                <h1 class="info-div-title">Year:</h1>
+                <p class="info-div-content">{{ car_info.car_year }}</p>
+            </div>
+
+            <div class="info-div-layout">
+                <h1 class="info-div-title">Vin:</h1>
+                <p class="info-div-content">{{ car_info.car_vin }}</p>
+            </div>
+            
+        </div>
+
+
+    </div>
+
+    <div class="div-03-layout">
+        <div class="div-03-body">
+            <a href="{% url 'scheduler:success_schedule' %}"><button class="confirm-btn">Confirm</button></a>
+        </div>
+    </div>
+
+    
+</body>
+</html>

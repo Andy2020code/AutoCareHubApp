@@ -1,0 +1,544 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.div-01-layout{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-01-body{
+    width: 90%;
+    height: 200px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 20px 0px;
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.div-01-body h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+}
+
+.upcoming-maintenance-div-layout{
+    width: 100%;
+    height: auto;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.upcoming-maintenance-div-body{
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 20px 0px;
+    background-color: #f5f5f5;
+    padding: 0px 0px;
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.um-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+.um-title-img{
+    width: 130px;
+    height: 100px;
+    background-image: url(../IMG/user-home/calendar.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.devider-um{
+    width: 80%;
+    height: 1px;
+    background-color: #000;
+}
+
+.maintenance-service{
+    width: 100%;
+}
+
+.maintenance-service h1{
+    margin: 10px 35px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.maintenance-service p{
+    margin: 10px 40px;
+    font-size: 20px;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.mechanic-bussiness-layout{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mechanic-bussiness-body{
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    margin: 20px 0px;
+    background-color: #f5f5f5;
+    padding: 0px 0px;
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.mechanic-bussiness-body{
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    margin: 20px 0px;
+    background-color: #f5f5f5;
+    padding: 10px 0px;
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.business-info{
+    width: auto;
+    height: auto;
+    padding: 20px 0px;
+    margin: 10px 20px;
+}
+
+.business-info h1{
+    font-family: 'bebas neue', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+}
+
+.business-info p{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.business-info a{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    color: #8b2635;
+}
+
+.business-map-ipad{
+    display: none;
+}
+
+.business-map-phone{
+    display: none;
+}
+
+.bussiness-btn{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+}
+
+.div-02-btn-01{
+    width: 150px;
+    height: 40px;
+    background-color: #8b2635;
+    color: #fff;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 15px;
+    margin: 10px 10px;
+}
+
+.div-02-btn-01:hover{
+    background-color: #fff;
+    color: #8b2635;
+    border: 1px solid #8b2635;
+    cursor: pointer;
+    position: relative;
+    bottom: -10px;
+}
+
+.div-02-btn-01:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 1200px){
+    .business-map{
+        display: none;
+    }
+        
+    .business-map-ipad{
+        display: block;
+    }
+}
+
+@media (max-width: 500px){
+
+    
+    .upcoming-maintenance-div-body{
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
+        margin: 20px 0px;
+        padding: 10px 0px;
+    }
+    
+    
+    .devider-um{
+        width: 80%;
+        height: 1px;
+        background-color: #000;
+        margin: 10px 0px;
+    }
+
+    .um-title-img{
+        width: 130px;
+        height: 130px;
+        background-image: url(../IMG/user-home/calendar.png);
+        background-size: 100%;
+    }
+
+    .mechanic-bussiness-body{
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 10px;
+        margin: 20px 0px;
+        background-color: #f5f5f5;
+        padding: 10px 0px;
+        box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .business-info{
+        width: 90%;
+        height: auto;
+        padding: 20px 0px;
+        margin: 10px auto;
+    }
+
+    .business-info-title{
+        color: #8b2635;
+        border: 1px solid black;
+        border-radius: 5px;
+        text-align: center;
+        margin: 20px 0px;
+        padding: 10px 0px;
+    }
+
+    .business-info h1{
+        font-family: 'bebas neue', sans-serif;
+        font-weight: 400;
+        font-size: 36px;
+    }
+
+    .business-info p{
+        font-family: 'Rajdhani', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .business-info a{
+        font-family: 'Rajdhani', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        text-decoration: none;
+        color: #8b2635;
+    }
+
+    .business-map{
+        display: none;
+    }
+
+    .business-map-ipad{
+        display: none;
+    }
+
+    .business-map-phone{
+        display: block;
+    }
+
+    
+    .div-02-right{
+        width: 100%;
+        flex-direction: column;
+        margin: 20px;
+    }
+    
+    .business-info{
+        width: 90%;
+        height: auto;
+    }
+    
+
+    
+    .bussiness-btn{
+        width: auto;
+        display: flex;
+        margin: 20px 0px;
+    }
+    
+    .div-02-btn-01{
+        width: 150px;
+        height: 40px;
+        background-color: #8b2635;
+        color: #fff;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 15px;
+        margin: 10px 10px;
+    }
+    
+    .div-02-btn-01:hover{
+        background-color: #fff;
+        color: #8b2635;
+        border: 1px solid #8b2635;
+        cursor: pointer;
+        position: relative;
+        bottom: -10px;
+    }
+}
+
+.div-03-layout{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-03-body{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 20px 0px;
+}
+
+.div-03-right{
+    width: 35%;
+    height: 100%;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.av{
+    font-size: 36px;
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 10px 0px;
+}
+
+.car-details{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-car-img{
+    width: 40%;
+    height: 200px;
+    background-image: url(../main/IMG/car-icon/robot.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0px;
+}
+
+.car-specs h1{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 100;
+}
+
+.car-specs p{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+}
+
+.vin-number{
+    font-size: 20px;
+    color: #8b2635;
+}
+
+.div-03-table{
+    width: 60%;
+    height: auto;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    border-radius: 10px;
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.div-03-table tr{
+    margin: 20px 0px;
+}
+
+.div-03-table-title{
+    width: 100%;
+    height: 20%;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    margin: 10px 30px;
+}
+
+.recent-maintenance{
+    width: 100%;
+    margin: 10px 30px;
+}
+
+th{
+    text-align: left;
+    color: #8b2635;
+    border-bottom: 1px solid black;
+}
+
+.total-price{
+    color: #8b2635;
+    font-weight: 600;
+}
+
+@media (max-width: 500px){
+    .div-03-body{
+        flex-direction: column;
+    }
+
+    .div-03-right{
+        width: 100%;
+        height: auto;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+    }
+
+    .car-details{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .user-car-img{
+        width: 100%;
+        height: 100px;
+        background-image: url(../main/IMG/car-icon/robot.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 50px;
+    }
+    
+
+    .div-03-table{
+        width: 100%;
+        height: auto;
+        background-color: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 20px;
+        border-radius: 10px;
+    }
+    
+}
+
+
+.div-04-layout{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.div-04-body{
+    width: 90%;
+    height: auto;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.div-04-body button{
+    width: 150px;
+    height: 40px;
+    background-color: #8b2635;
+    color: #fff;
+    border: 0px;
+    border-radius: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    transition: .3s;
+    margin: 10px 20px;
+}
+
+.div-04-body button:hover{
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #8b2635;
+    color: #8b2635;
+    position: relative;
+    top: 5px;
+}
+
+@media (max-width: 500px){
+
+    .div-04-body{
+        flex-direction: column;
+    }
+
+    .div-04-body button{
+        width: 250px;
+        margin: 10px 0px;
+    }
+}

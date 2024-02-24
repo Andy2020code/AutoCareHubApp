@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Bussiness Creation | Form</title>
+</head>
+<body>
+
+    <form action="" method="post">
+
+        <div class="div-01-layout">
+            {% csrf_token %}
+            <div class="div-01-body">
+                <div class="label-input">
+                    <label for="bussiness_name">Bussiness Name:</label><br>
+                    <input type="text" class="bussiness_name" name="bussiness_name" maxlength="255" required="" id="id_bussiness_name" placeholder="'Name'">
+                </div>
+    
+                <div class="label-input">
+                    <label for="bussiness_address">Bussiness Address:</label><br>
+                    <input type="text" class="bussiness_address" name="bussiness_address" maxlength="255" required="" id="id_bussiness_address" placeholder="'123 Main Street City Zip'">
+                </div>
+    
+                <div class="label-input">
+                    <label for="bussiness_phone">Bussiness Phone:</label><br>
+                    <input type="phone" class="bussiness_phone" name="bussiness_phone" maxlength="25" required="" id="id_bussiness_phone" placeholder="'555-555-5555'">
+                </div>
+    
+                <div class="label-input">
+                    <label for="bussiness_email">Bussiness Email:</label><br>
+                    <input type="email" class="bussiness_email" name="bussiness_email" maxlength="255" required="" id="id_bussiness_email" placeholder="'Email@example.com'">
+                </div>
+    
+                <div class="label-input">
+                    <label for="bussiness_website">Bussiness Website:</label><br>
+                    <input type="text" class="bussiness_website" name="bussiness_website" maxlength="255" required="" id="id_bussiness_website" placeholder="'example.com'">
+                </div>
+                <button class="submit-btn" type="submit">Save</button>
+            </div>
+        </div>
+    </form>
+
+    <style>
+        .div-01-layout{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .div-01-body{
+            width: 95%;
+            height: auto;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0px;
+        }
+
+        .label-input{
+            margin: 10px 0px;
+        }
+
+        .label-input input{
+            width: 300px;
+            height: 25px;
+            border: 1px solid #8b2635;
+            border-radius: 5px;
+            padding: 5px;
+            color: #8b2635;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 15px;
+        }
+
+        .label-input label{
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 18px;
+            color: #000;
+            margin: 10px 0px;
+        }
+
+        .submit-btn{
+            width: 150px;
+            height: 40px;
+            background-color: #8b2635;
+            border: none;
+            border-radius: 10px;
+            font-size: 17px;
+            font-family: '', sans-serif;
+            font-weight: 300;
+            color: #fff;
+            margin: 20px auto;
+        }
+    </style>
+    
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Questionnaire</title>
+</head>
+<body>
+
+    <h1 class="form_title">Request Service Form<br>Alaina's Auto Mechanic</h1>
+
+    <form class="questionForm" method="POST">
+        {% csrf_token %}
+
+
+        <div class="input_label">
+            <label for="client_full_name">Full Legal Name:</label><br>
+            <input type="text" class="client_full_name" name="client_full_name" maxlength="255" required="" id="id_client_full_name">
+        </div>
+
+        <div class="input_label">
+            <label for="client_birthdate">Date of Birth:</label><br>
+            <input type="date" class="client_birthdate" name="client_birthdate" required id="client_birthdate">
+
+            <div class="exemple">
+                <p>Exemple: MM/DD/YYYY</p>
+            </div>
+        </div>
+
+        
+        <div class="input_label">
+            <label for="client_email">Email:</label><br>
+            <input type="email" class="client_email" name="client_email" maxlength="255" required="" id="id_client_email">
+        </div>
+
+        <div class="input_label">
+            <label for="client_phone">Phone:</label><br>
+            <input type="phone" class="client_phone" name="client_phone" maxlength="25" required="" id="id_client_phone">
+        </div>
+
+        <div class="input_label">
+            <label for="service-requested">Service Needed</label><br>
+            <input type="text" class="service_requested" name="service_requested" maxlength="255" required="" id="id_service_requested" placeholder="Oil Change, Diagnostics...">
+
+            <div class="exemple_div_01">
+
+                <div class="left-exemple-div">
+                    <h1>Services Available:</h1>
+                    <p>Oil Change</p>
+                    <p>Brake Repair</p>
+                    <p>Engine Diagnostic</p>
+                    <p>Tire Replacement</p>
+                </div>
+
+                <div class="right-exemple-div">
+                    <p>Rotate Tires</p>
+                    <p>Emissions</p>
+                    <p>Basic Maintenance Package</p>
+                    <p>Car Washing</p>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="input_label">
+            <label for="vehicle_make">Car Make:</label><br>
+            <input type="text" class="vehicle_make" name="vehicle_make" maxlength="50" required="" id="id_vehicle_make" placeholder="Your Car Make...">
+
+            <div class="exemple_div_02">
+
+                <div class="exemple_div_02_left">
+                    <p>Toyota, Ford, Chevrolet, Honda, Nissan, Jeep ...</p>                    
+                </div>
+            </div>
+        </div>
+
+        <div class="input_label">
+            <label for="vehicle_model">Car Model:</label><br>
+            <input type="text" class="vehicle_model" name="vehicle_model" maxlength="50" required="" id="id_vehicle_model" placeholder="Your Car Model...">
+
+            <div class="exemple_div_03">
+            
+                <div class="exemple_div_03_left">
+                    <p>CR-V, Rav4, Malibu, Accord, Altima, Silverado ...</p>                    
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="input_label">
+            <label for="vehicle_year">Car Year:</label><br>
+            <input type="text" class="vehicle_year" name="vehicle_year" maxlength="4" required="" id="id_vehicle_year" placeholder="Your Car Year...">
+
+            <div class="exemple_div_43">
+            
+                <div class="exemple_div_04_left">
+                    <p>YYYY / 2012...</p>                    
+                </div>
+            </div>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <style>
+        .questionForm{
+            width: 100%;
+            min-height: 100vh;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form_title{
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: #8b2635;
+        }
+
+        .input_label{
+            width: 90%;
+            margin: 20px 0px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .input_label input{
+            width: 300px;
+            height: 25px;
+            border: 1px solid #8b2635;
+            border-radius: 5px;
+            padding: 5px;
+            color: #8b2635;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 15px;
+            font-weight: 600
+        }
+
+        .input_label label{
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 18px;
+            color: #8b2635;
+        }
+
+        .exemple_div_01{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .left-exemple-div h1{
+            font-size: 20px;
+        }
+    </style>
+
+</body>
+</html>
