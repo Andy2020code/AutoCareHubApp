@@ -1,0 +1,46 @@
+{
+  "lang":"en",
+  "name":"pipeline",
+  "version":"0.0.0",
+  "spacy_version":">=3.7.4,<3.8.0",
+  "description":"",
+  "author":"",
+  "email":"",
+  "url":"",
+  "license":"",
+  "spacy_git_version":"bff8725f4",
+  "vectors":{
+    "width":0,
+    "vectors":0,
+    "keys":0,
+    "name":null,
+    "mode":"default"
+  },
+  "labels":{
+    "textcat":[
+      "greeting",
+      "goodbye",
+      "thanks",
+      "noanswer",
+      "options",
+      "what_is_car_radiator",
+      "what_is_car_engine",
+      "what_is_car_battery",
+      "what_is_car_brake",
+      "what_is_car_clutch",
+      "what_is_car_gear",
+      "what_is_car_steering",
+      "blood_pressure",
+      "blood_pressure_search"
+    ]
+  },
+  "pipeline":[
+    "textcat"
+  ],
+  "components":[
+    "textcat"
+  ],
+  "disabled":[
+
+  ]
+}

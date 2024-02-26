@@ -1,0 +1,20 @@
+{
+  "labels":[
+    "greeting",
+    "goodbye",
+    "thanks",
+    "noanswer",
+    "options",
+    "what_is_car_radiator",
+    "what_is_car_engine",
+    "what_is_car_battery",
+    "what_is_car_brake",
+    "what_is_car_clutch",
+    "what_is_car_gear",
+    "what_is_car_steering",
+    "blood_pressure",
+    "blood_pressure_search"
+  ],
+  "threshold":0.0,
+  "positive_label":null
+}
