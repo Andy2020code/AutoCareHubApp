@@ -18,7 +18,7 @@
   },
   "labels":{
     "textcat":[
-      "about_self",
+      "about_name",
       "about_bot",
       "about_bot_potential",
       "about_chat_gpt",
@@ -27,7 +27,7 @@
       "goodbye",
       "thanks",
       "noanswer",
-      "options",
+      "ability_options",
       "what_is_car_radiator",
       "what_is_car_engine",
       "what_is_car_battery",

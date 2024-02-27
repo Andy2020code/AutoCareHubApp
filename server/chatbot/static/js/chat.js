@@ -5,6 +5,13 @@ document.getElementById('send-message').addEventListener('click', function() {
 
 ////////////////////////////////////////////////////////////////////
 
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        document.getElementById('send-message').click();
+    }
+});
+
 ///////////////////////////////////////////////////////////////////
 
 function append_user_input() {
@@ -59,6 +66,9 @@ function append_user_input() {
         //call the sendData function
         sendData(user_input);
     }
+
+    //clear the user input field
+    document.getElementById('user_input').value = '';
 
     //call the removeClass function
     style_user_message_div();

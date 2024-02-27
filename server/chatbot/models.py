@@ -10,3 +10,12 @@ class Intents_model_00(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     class Meta:
         ordering = ['created_at']
+
+
+class user_input(models.Model):
+    id = models.AutoField(primary_key=True)
+    user_input_text = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['created_at']

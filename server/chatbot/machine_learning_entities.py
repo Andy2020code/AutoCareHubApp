@@ -13,7 +13,6 @@ def machine_learning_entities(request, keywords):
     nlp = spacy.blank('en')    
     # Access the loaded model and pass the keywords to it
     doc = nlp(keywords)
-    print("doc:", doc)
 
     for ent in doc.ents:
         #print the entity and label

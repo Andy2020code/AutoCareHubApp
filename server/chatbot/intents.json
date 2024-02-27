@@ -1,7 +1,7 @@
 {
     "intents": [
         {
-            "tag": "about_self",
+            "tag": "about_name",
             "patterns": [
                 "what is your name ?",
                 "whats your name ?",
@@ -30,7 +30,13 @@
         {
             "tag": "about_bot_potential",
             "patterns": [
-                "how and why does AI or artificial intelligence make you different from other traditional digital assistants ?"
+                "what makes you different with ai ?", 
+                "how does ai change your capabilities ?", 
+                "what sets you appart with ai ?", 
+                "why do you have ai in you ?", 
+                "how does ai make you different ?", 
+                "why do you need ai ?", 
+                "what makes you special ?"
             ],
             "responses": [
                 "AI makes me different because I am able to learn and adapt to new information and tasks. I can understand and respond to natural language, and I can be trained to perform specific tasks."
@@ -54,6 +60,9 @@
         {
             "tag": "about_self_abilities",
             "patterns": [
+                "tell me what you can do",
+                "what are your abilities ?",
+                "what are your capabilities ?",
                 "How can you help me ?",
                 "what kind of tasks can you do ?",
                 "What can you do ?",
@@ -117,8 +126,14 @@
             "context_set": ""
         },
         {
-            "tag": "options",
-            "patterns": [],
+            "tag": "ability_options",
+            "patterns": [
+                "list me what you do exactly",
+                "tell me exactly what you do",
+                "what are the things you can do ?",
+                "create me a list of your abilities",
+                "what else can you do"
+            ],
             "responses": [
                 "I can use my knowledge to help you with your car-related queries.",
                 "I can help you with car-related queries.",
