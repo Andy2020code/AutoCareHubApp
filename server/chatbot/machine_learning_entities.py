@@ -10,7 +10,7 @@ import json
 
 def machine_learning_entities(request, keywords):
     #load the model
-    nlp = spacy.load("en_core_web_lg")    
+    nlp = spacy.blank('en')    
     # Access the loaded model and pass the keywords to it
     doc = nlp(keywords)
     print("doc:", doc)
