@@ -36,7 +36,9 @@
                 "why do you have ai in you ?", 
                 "how does ai make you different ?", 
                 "why do you need ai ?", 
-                "what makes you special ?"
+                "what makes you special ?",
+                "explain how you differ from other language models?",
+                "how are you unique"
             ],
             "responses": [
                 "AI makes me different because I am able to learn and adapt to new information and tasks. I can understand and respond to natural language, and I can be trained to perform specific tasks."
