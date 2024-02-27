@@ -1,5 +1,10 @@
 {
   "labels":[
+    "about_self",
+    "about_bot",
+    "about_bot_potential",
+    "about_chat_gpt",
+    "about_self_abilities",
     "greeting",
     "goodbye",
     "thanks",

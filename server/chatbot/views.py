@@ -12,6 +12,7 @@ import json
 import os
 
 from spacy.util import minibatch
+import json
 
 # Import the intents.json file
 file_path = os.path.relpath('server/chatbot/intents.json', os.path.dirname(__file__))
@@ -19,7 +20,7 @@ file_path = os.path.relpath('server/chatbot/intents.json', os.path.dirname(__fil
 if os.path.exists(file_path):
     print('file found')
     with open(file_path) as file:
-        data_file = json.load(file)
+        data_file = json.loads(file.read())
 else:
     print('file not found')
     data_file = {}
