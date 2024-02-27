@@ -25,7 +25,12 @@ SECRET_KEY = 'django-insecure-ypxpwq%+==i1rivo1ykn4k_f+db84%=mlcwki**w@=7-q3w$ni
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'silvaroute.com',
+    'www.silvaroute.com',
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
