@@ -15,7 +15,6 @@ document.addEventListener('keydown', function(event) {
 ///////////////////////////////////////////////////////////////////
 
 function append_user_input() {
-    //get the
 
     // Get the user input value
     const user_input = document.getElementById('user_input').value;
@@ -73,6 +72,30 @@ function append_user_input() {
     //call the removeClass function
     style_user_message_div();
 }
+//////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////
+
+function sendData(user_input) {
+    const keywords = user_input;
+    const url = `/chatbot/get-keywords/${keywords}`;
+
+    if (user_input == '') {
+        alert('Please enter a message');
+        return; // Exit the function if user input is empty
+    }
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            append_ai_message(data.response);
+            console.log(data.response);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+}
+
 //////////////////////////////////////////////////////////////////
 
 function style_user_message_div() {
@@ -164,15 +187,6 @@ function append_ai_message(data) {
 
 //////////////////////////////////////////////////////////////////
 
-function remove_class() {
-    setTimeout(() => {
-        const ai_response = document.querySelector('.ai-response');
-        ai_response.classList.remove('new-card');
-        ai_response.classList.add('old-card');
-    }, 5000);
-}
-//////////////////////////////////////////////////////////////////
-
 //////////////////////////////////////////////////////////////////
 
 function scroll_to_bottom() {
@@ -184,25 +198,14 @@ function scroll_to_bottom() {
 //////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////
-
-function sendData(user_input) {
-    const keywords = user_input;
-    const url = `/chatbot/get-keywords/${keywords}`;
-
-    if (user_input == '') {
-        alert('Please enter a message');
-        return; // Exit the function if user input is empty
-    }
-
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            append_ai_message(data.response);
-            console.log(data.response);
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
+function remove_class() {
+    setTimeout(() => {
+        const ai_response = document.querySelector('.ai-response');
+        ai_response.classList.remove('new-card');
+        ai_response.classList.add('old-card');
+    }, 5000);
 }
-
 //////////////////////////////////////////////////////////////////
+
+
+

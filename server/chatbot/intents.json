@@ -60,21 +60,40 @@
         {
             "tag": "about_self_abilities",
             "patterns": [
-                "tell me what you can do",
-                "what are your abilities ?",
-                "what are your capabilities ?",
-                "How can you help me ?",
-                "what kind of tasks can you do ?",
-                "What can you do ?",
-                "What help do you provide ?",
-                "How can you be helpful ?",
-                "What support is offered ?"
+                "how can you help me ?",
+                "what can you do for me ?",
+                "How can you be helpful ?"
             ],
             "responses": [
                 "As your digital mechanic assistant, I am trained to define the most common car parts and explain what they do."
             ],
             "context_set": "about_me"
         },
+
+        {
+            "tag": "list_self_abilities",
+            "patterns": [
+                "tell me what you can do",
+                "list me all your capabilities",
+                "put in a list all your abilities",
+                "create me a list of your abilities",
+                "what are your abilities ?",
+                "what are your capabilities ?",
+                "what kind of tasks can you do ?",
+                "What can you do ?",
+                "What support is offered ?",
+                "list me what you do exactly",
+                "tell me exactly what you do",
+                "what are the things you can do ?",
+                "create me a list of your abilities",
+                "what else can you do"
+            ],
+            "responses": [
+                "<p>1. I can use my knowledge to help you with your car-related queries.</p><p>2. I can help you with car-related queries.</p><p>3. I can provide you with tips and tricks for car maintenance.</p>"
+            ],
+            "context_set": "about_me"
+        },
+
         {
             "tag": "greeting",
             "patterns": [
