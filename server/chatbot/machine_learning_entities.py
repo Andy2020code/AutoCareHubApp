@@ -4,7 +4,7 @@ from spacy.pipeline import EntityRuler
 import json
 
 # Download the model
-spacy.cli.download("en_core_web_lg")
+#spacy.cli.download("en_core_web_lg")
 
 
 
