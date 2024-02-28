@@ -70,6 +70,10 @@
     }
 }
 
+.ai-response p{
+    margin: 20px 0px;
+}
+
 .about-ai{
     width: auto;
     height: auto;
