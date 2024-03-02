@@ -77,8 +77,8 @@ function append_user_input() {
 //////////////////////////////////////////////////////////////////
 
 function sendData(user_input) {
-    const keywords = user_input;
-    const url = `/chatbot/get-keywords/${keywords}`;
+    const response = user_input;
+    const url = `/chatbot/generate-response/${response}`;
 
     if (user_input == '') {
         alert('Please enter a message');

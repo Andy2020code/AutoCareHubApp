@@ -1,179 +1,110 @@
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
 from django.http import JsonResponse
-from spacy.training import Example
-from spacy.util import minibatch
-
-from nltk.stem import WordNetLemmatizer
-from nltk.corpus import wordnet
-
-from .machine_learning_entities import machine_learning_entities
-
-import spacy
-import nltk
-
-import random
-import string
-import json
+from transformers import GPT2Tokenizer, GPT2LMHeadModel, TextDataset, DataCollatorForLanguageModeling, Trainer, TrainingArguments
 import os
+import json
 
-from thinc.api import prefer_gpu
+# Load pre-trained GPT-2 tokenizer and model
+tokenizer = GPT2Tokenizer.from_pretrained("gpt2", pad_token="50256")
+model = GPT2LMHeadModel.from_pretrained("gpt2")
 
-# Use GPU if available
-if prefer_gpu():
-    print("Using GPU!")
-else:
-    print("Using CPU :(")
+# Set end-of-sequence token as the padding token
+tokenizer.pad_token = tokenizer.eos_token
 
-
-# Import the intents.json file
 file_path = os.path.relpath('server/chatbot/intents.json', os.path.dirname(__file__))
+file_path_01 = os.path.relpath('server/chatbot/input_output_pairs.json', os.path.dirname(__file__))
 
 if os.path.exists(file_path):
-    print('file found')
+    print('File found')
     with open(file_path) as file:
         data_file = json.loads(file.read())
+        print('data_file:', data_file)
 else:
-    print('file not found')
+    print('File not found')
     data_file = {}
 
-# Start with blank English model
-nlp = spacy.blank('en')
-
-# Add the textcat to the pipeline
-nlp.add_pipe("textcat")
-
-# Get the textcat component
-textcat = nlp.get_pipe("textcat")
-
-# Add labels to text classifier
-for intent in data_file["intents"]:
-    textcat.add_label(intent["tag"])
-
-# Convert the data into SpaCy format
-train_data = []
-optimizer = nlp.begin_training()
-losses = {}
-
-for intent in data_file['intents']:
-    for pattern in intent['patterns']:
-        train_data.append(Example.from_dict(nlp.make_doc(pattern), {'cats': {intent['tag']: True}}))
-
-# Train the model
 
 
-for i in range(10):
-    random.shuffle(train_data)
-    losses = {}
+if os.path.exists(file_path_01):
+    print('File 2 found')
+    with open(file_path, "w") as file_02:
+        for entry in file_02:
+            file_02.write(f"input: {file_02['input_text']} output: {file_02['target_text']}\n")
+            print('file_02:', file_02)
+else:
+    print('File not found')
+    file_02 = {}
 
-    # Batch the examples and iterate over them
-    for batch in minibatch(train_data, size=32):
-        for example in batch:
-            # Update the model
-            nlp.update([example], sgd=optimizer, losses=losses)
+# Extract input-output pairs from the dataset
+input_texts = [example["input_text"] for example in data_file]
+target_texts = [example["target_text"] for example in data_file]
 
-    print(losses)
+# Tokenize the target texts
+tokenized_targets = tokenizer(target_texts, padding=True, truncation=True, return_tensors="pt")
 
-# Save the model
-nlp.to_disk("model")
+# Define the block size (maximum length of input sequences)
+block_size = 128  # Adjust this according to your model's maximum input length
 
-# Load the model
-nlp = spacy.load("model")
+# Create TextDataset and DataCollator
+train_dataset = TextDataset(
+    tokenizer=tokenizer,
+    file_path=file_path,
+    block_size=block_size,
+)
 
+# Use both input and target sequences during training
+data_collator = DataCollatorForLanguageModeling(
+    tokenizer=tokenizer, mlm=False
+)
 
-############################################
+# Define training arguments
+training_args = TrainingArguments(
+    output_dir="./output",
+    overwrite_output_dir=True,
+    num_train_epochs=3,
+    per_device_train_batch_size=4,
+    save_steps=1000,
+    save_total_limit=2,
+)
+
+# Create Trainer and start training
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    data_collator=data_collator,
+    train_dataset=train_dataset,
+)
+
+trainer.train()
+
+# Define the home view
 def home(request):
     return render(request, 'chat.html')
-############################################
 
-############################################
-def tokenize_process(request, keywords):
-    keywords_received = keywords
-    if keywords_received is not None:
-        words = nltk.word_tokenize(keywords_received)
-        tokenized_words = [word.lower() for word in words]
-        print("tokenized_words:", tokenized_words)
-    return tokenized_words
-############################################
+# Define the generate_response view
+def generate_response(request, user_input):
+    # Get the input text from the request
+    input_text = user_input
 
-############################################
-def lemmatize_process(tokenized_words):
-    if tokenized_words is not None:
-        lemmatizer = WordNetLemmatizer()
-        lemmatized_words = [lemmatizer.lemmatize(word) for word in tokenized_words]
-        print("lemmatized_words:", lemmatized_words)
-    return lemmatized_words
-############################################
+    # Encode the input text with attention mask and padding
+    tokenized_input = tokenizer.encode_plus(
+        input_text,
+        padding=True,
+        truncation=True,
+        return_attention_mask=True,
+        return_tensors="pt"
+    )
 
-############################################
-def ponctuation_removal_process(lemmatized_words):
-    if lemmatized_words is not None:
-        cleaned_words = [word for word in lemmatized_words if word not in string.punctuation]    
-        print("cleaned_words:", cleaned_words)
-    return cleaned_words
-############################################
-
-
-
-
-
-
-# Function to predict the intent of a message
-def predict_intent(request, keywords):
-
-    #save the ketwords in a database using djangos system
-    if keywords is not None:
-        from .models import user_input
-        user_input.objects.create(user_input_text=keywords)
-        print("keywords:", keywords)
-
-    # call the tokenize_process function to tokenize the keywords
-    tokenized_words = tokenize_process(request, keywords)
-
-    # call the lemmatize_process function to lemmatize the tokenized words
-    lemmatized_words = lemmatize_process(tokenized_words)
-
-    #call function ponctuation_removal_process to remove the ponctuation from the lemmatized words
-    cleaned_words = ponctuation_removal_process(lemmatized_words)
-    
-    # Use the model to predict the intent
-    doc = nlp(" ".join(cleaned_words))
-
-    # Find the label with the highest score
-    max_score = max(doc.cats.values())
-    predicted_intent = [k for k, v in doc.cats.items() if v == max_score][0]
-
-    # Send data to the machine learning function for entity recognition
-    machine_learning_entities(request, keywords)
-
-
-    return predicted_intent
-
-
-# Function to generate a response
-def generate_response(intent):
-    # Find the intent in the data
-    for i in data_file["intents"]:
-        if i['tag'] == intent:
-            # Choose a random response
-            response = random.choice(i["responses"])
-            return response
-
-
-
-# Function to handle a message
-def handle_message(request, keywords):
-    # Predict the intent of the message
-    intent = predict_intent(request, keywords)
-    print("intent:", intent)
+    # Get the input IDs and attention mask from the tokenized input
+    input_ids = tokenized_input["input_ids"]
+    attention_mask = tokenized_input["attention_mask"]
 
     # Generate a response
-    response = generate_response(intent)
-    print("response:", response)
+    output = model.generate(input_ids, attention_mask=attention_mask, max_length=50, num_return_sequences=1, no_repeat_ngram_size=2)
 
-    # Return the response as JSON
-    return JsonResponse({"response": response})
+    # Decode the response
+    response_text = tokenizer.decode(output[:, input_ids.shape[-1]:][0], skip_special_tokens=True)
 
-
-
-
+    # Return the generated response as JSON
+    return JsonResponse({"response": response_text})

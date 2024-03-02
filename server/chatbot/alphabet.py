@@ -1,42 +1,58 @@
-# Define the alphabet dictionary
-alphabet = {
-    "a": "01100001",
-    "b": "01100010",
-    "c": "01100011",
-    "d": "01100100",
-    "e": "01100101",
-    "f": "01100110",
-    "g": "01100111",
-    "h": "01101000",
-    "i": "01101001",
-    "j": "01101010",
-    "k": "01101011",
-    "l": "01101100",
-    "m": "01101101",
-    "n": "01101110",
-    "o": "01101111",
-    "p": "01110000",
-    "q": "01110001",
-    "r": "01110010",
-    "s": "01110011",
-    "t": "01110100",
-    "u": "01110101",
-    "v": "01110110",
-    "w": "01110111",
-    "x": "01111000",
-    "y": "01111001",
-    "z": "01111010"
-}
+from transformers import TFGPT2LMHeadModel, GPT2Tokenizer, TFTrainer, TFTrainingArguments
+import tensorflow as tf
 
-# Define a function to convert a string to binary representation
-def convert_to_binary(string):
-    binary_string = ""
-    for char in string:
-        if char in alphabet:
-            binary_string += alphabet[char]
-    return binary_string
+# Load pre-trained GPT-2 model and tokenizer
+tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
+model = TFGPT2LMHeadModel.from_pretrained("gpt2")
 
-# Example usage
-sentence = "hello world"
-binary_sentence = convert_to_binary(sentence)
-print(binary_sentence)
+# Dummy training dataset
+train_dataset = [
+    {"input_ids": [101, 1045, 2031, 1037, 1047, 1012, 102], "attention_mask": [1, 1, 1, 1, 1, 1, 1]},
+    {"input_ids": [101, 2017, 1005, 2222, 1045, 2031, 1037, 1047, 1012, 102], "attention_mask": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]},
+    {"input_ids": [101, 1045, 2064, 1005, 102, 2039, 1996, 3200, 2097, 2507, 1996, 2168, 2079, 1996, 2060, 1998, 2023, 2428, 1012, 102], "attention_mask": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]},
+    {"input_ids": [101, 1045, 2064, 1005, 2222, 3200, 2097, 2507, 1996, 2168, 2079, 1996, 2060, 1998, 2023, 2428, 1012, 102], "attention_mask": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]},
+    {"input_ids": [101, 1045, 1005, 2222, 3200, 2097, 2507, 1996, 2168, 2079, 1996, 2060, 1998, 2023, 2428, 1012, 102], "attention_mask": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]}
+]
+
+# Convert list of dictionaries to TensorFlow dataset
+def map_to_tf_dataset(example):
+    input_ids = example["input_ids"]
+    attention_mask = example["attention_mask"]
+    return {"input_ids": input_ids, "attention_mask": attention_mask}
+
+
+train_dataset = tf.data.Dataset.from_generator(
+    lambda: train_dataset,
+    output_types={"input_ids": tf.int32, "attention_mask": tf.int32},
+    output_shapes={"input_ids": tf.TensorShape([None]), "attention_mask": tf.TensorShape([None])}
+)
+
+num_epochs = 3
+batch_size = 4
+train_dataset = train_dataset.repeat(num_epochs).batch(batch_size)
+# Define or process the train_dataset here
+
+# Assert the cardinality of the training dataset
+train_dataset = train_dataset.apply(tf.data.experimental.assert_cardinality(len('1')))
+
+# Use train_dataset in the training loop or pass it to other TensorFlow operations/functions
+def train_model(model, train_dataset, training_args):
+    # Define training arguments
+    training_args = TFTrainingArguments(
+        output_dir="./output",
+        overwrite_output_dir=True,
+        num_train_epochs=3,
+        per_device_train_batch_size=4,
+        save_steps=2048,
+        save_total_limit=2,
+    )
+
+    # Instantiate Trainer
+    trainer = TFTrainer(
+        model=model,
+        args=training_args,
+        train_dataset=train_dataset,
+    )
+
+    # Fine-tune the model
+    trainer.train()

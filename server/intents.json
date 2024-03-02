@@ -1,0 +1,707 @@
+{
+    "intents": [
+        {
+            "tag": "about_name",
+            "patterns": [
+                "what is your name ?",
+                "whats your name ?",
+                "what should I call you ?",
+                "who are you ?",
+                "tell me your name",
+                "who are you ?",
+                "what do you identify as ?"
+            ],
+            "responses": [
+                "My name is Wrench.",
+                "You can call me Wrench.",
+                "They call me Wrench.",
+                "I was named Wrench."
+            ],
+            "context_set": "about_me"
+        },
+        {
+            "tag": "about_bot",
+            "patterns": ["what are you ?"],
+            "responses": [
+                "I'm an AI-driven digital assistant specialized in car troubleshooting tasks. I make use of a sophisticated and customized programming framework for car troubleshooting tasks."
+            ],
+            "context_set": "about_me"
+        },
+        {
+            "tag": "about_bot_potential",
+            "patterns": [
+                "what makes you different with ai ?", 
+                "how does ai change your capabilities ?", 
+                "what sets you appart with ai ?", 
+                "why do you have ai in you ?", 
+                "how does ai make you different ?", 
+                "why do you need ai ?", 
+                "what makes you special ?"
+            ],
+            "responses": [
+                "AI makes me different because I am able to learn and adapt to new information and tasks. I can understand and respond to natural language, and I can be trained to perform specific tasks."
+            ],
+            "context_set": "about_me"
+        },
+        {
+            "tag": "about_chat_gpt",
+            "patterns": [
+                "do you use ChatGPT ?",
+                "do you use ChatGPT to work or function ?",
+                "are you a ChatGPT model ?",
+                "are you part of ChatGPT ?",
+                "do you have ChatGPT code in you ?"
+            ],
+            "responses": [
+                "No, I am a fully custom-built AI-powered digital assistant. I am specifically designed to help with car troubleshooting tasks, at least for now."
+            ],
+            "context_set": "about_me"
+        },
+        {
+            "tag": "about_self_abilities",
+            "patterns": [
+                "how can you help me ?",
+                "what can you do for me ?",
+                "How can you be helpful ?"
+            ],
+            "responses": [
+                "As your digital mechanic assistant, I am trained to define the most common car parts and explain what they do."
+            ],
+            "context_set": "about_me"
+        },
+
+        {
+            "tag": "list_self_abilities",
+            "patterns": [
+                "tell me what you can do",
+                "list me all your capabilities",
+                "list me all that you can do",
+                "put in a list all your abilities",
+                "create me a list of your abilities",
+                "what are your abilities ?",
+                "what are your capabilities ?",
+                "what kind of tasks can you do ?",
+                "What can you do ?",
+                "What support is offered ?",
+                "list me what you do exactly",
+                "tell me exactly what you do",
+                "what are the things you can do ?",
+                "create me a list of your abilities",
+                "what else can you do"
+            ],
+            "responses": [
+                "<p>1. I can use my knowledge to help you with your car-related queries.</p><p>2. I can help you with car-related queries.</p><p>3. I can provide you with tips and tricks for car maintenance.</p>"
+            ],
+            "context_set": "about_me"
+        },
+
+        {
+            "tag": "greeting",
+            "patterns": [
+                "hello",
+                "hi",
+                "good morning",
+                "Is anyone there?",
+                "whats up",
+                "Good day",
+                "hey there",
+                "wasup"
+            ],
+            "responses": [
+                "Hello!",
+                "Good to see you again!",
+                "Hi there, how can I help?"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye",
+                "",
+                "Take Care",
+                "Catch you later",
+                "talk to you later"
+            ],
+            "responses": ["See ya later, alligator!", "Have a great day!", "Goodbye!"],
+            "context_set": ""
+        },
+        {
+            "tag": "thanks",
+            "patterns": ["Thanks", "Thank you", "That's helpful"],
+            "responses": ["You're welcome!", "Anytime!", "My pleasure"],
+            "context_set": ""
+        },
+        {
+            "tag": "noanswer",
+            "patterns": [],
+            "responses": [
+                "Sorry, I can't understand you.",
+                "Please provide more information.",
+                "Not sure I understand.",
+                "I only understand topics related to automobiles."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "ability_options",
+            "patterns": [
+                "list me what you do exactly",
+                "tell me exactly what you do",
+                "what are the things you can do ?",
+                "create me a list of your abilities",
+                "what else can you do"
+            ],
+            "responses": [
+                "I can use my knowledge to help you with your car-related queries.",
+                "I can help you with car-related queries.",
+                "I can provide you with tips and tricks for car maintenance."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "define_car_radiator",
+            "patterns": [
+                "What is a radiator?", 
+                "What's a radiator?", 
+                "Define radiator",
+                "Explain what a radiator is",
+                "What exactly is a radiator?",
+                "Can you describe what a radiator is?",
+                "Tell me about radiators",
+                "I'm curious, what is a radiator?",
+                "Please provide information on radiators",
+                "Could you clarify what a radiator is?",
+                "Help me understand what a radiator is",
+                "Can you shed some light on radiators?",
+                "Break down what a radiator is for me",
+                "Discuss radiators",
+                "I'd like to know more about radiators",
+                "Could you explain what radiators are?",
+                "Give me an overview of radiators",
+                "What are radiators?",
+                "What purpose do radiators serve?",
+                "Describe radiators",
+                "Explain the function of radiators",
+                "What role do radiators play in a car?"
+            ],
+            "responses": [
+                "A car radiator is a crucial component of the vehicle's cooling system. Its primary function is to dissipate heat generated by the engine during operation."
+            ],
+            "context_set": "definition_of_car_parts"
+        },
+        {
+            "tag": "define_car_radiator_function",
+            "patterns": [
+                "What does a radiator do?", 
+                "What's the radiator's purpose?", 
+                "Define the purpose of a radiator",
+                "Explain radiator function",
+                "What is the function of a radiator?",
+                "Why do cars have radiators?",
+                "What role does a radiator play in a car?",
+                "Can you describe the function of a radiator?",
+                "Tell me about the purpose of car radiators",
+                "I'm curious, what does a radiator do?",
+                "Please provide information on radiator function",
+                "Could you clarify the purpose of a radiator?",
+                "Help me understand what a radiator does",
+                "Can you shed some light on the function of radiators?",
+                "Break down the role of radiators for me",
+                "Discuss radiator function in detail",
+                "I'd like to know more about the purpose of radiators",
+                "Could you explain the purpose of car radiators?",
+                "Give me an overview of radiator function",
+                "What does the radiator do exactly?",
+                "What is the function of the car radiator?",
+                "Can you explain the purpose of radiators?",
+                "What purpose does a radiator serve?",
+                "Describe the function of a radiator"
+            ],
+            "responses": [
+                "The radiator's primary function is to dissipate heat generated by the engine during operation. It does this by transferring heat from the coolant to the air blown through the radiator by the fan."
+            ],
+            "context_set": "definition_of_car_parts"
+        },
+        {
+            "tag": "car_radiator_issue",
+            "patterns": [
+                "My radiator isn't working", 
+                "My radiator won't work", 
+                "Radiator is broken", 
+                "Radiator stopped working", 
+                "I'm having radiator issues", 
+                "I'm experiencing issues with my radiator", 
+                "I can't get my radiator to work",
+                "My radiator is malfunctioning",
+                "My car is overheating",
+                "There's a problem with my radiator",
+                "My car's radiator is leaking",
+                "My radiator is clogged",
+                "My radiator is not cooling properly",
+                "My car's temperature gauge is high",
+                "I suspect my radiator is faulty",
+                "My car is losing coolant",
+                "My radiator fan is not working",
+                "My car is running hot",
+                "My car is overheating when idle",
+                "There's steam coming from my engine",
+                "My engine is overheating"
+            ],
+            "responses": [
+                "If you're experiencing issues with your car's radiator, it's important to have it checked by a professional mechanic. Common issues include: <p>1 - Leaks</p> <p>2 - Clogs</p> <p>3 - Overheating.</p>"
+            ],
+            "context_set": "car_issue"
+        },
+        {
+            "tag": "car_radiator_possible_solution",
+            "patterns": [
+                "How can I fix my car radiator?", 
+                "Can my radiator be fixed?", 
+                "Help me diagnose and troubleshoot my radiator", 
+                "Guide me to fix the car radiator", 
+                "Show me steps to fix my radiator", 
+                "Step by step to fix a radiator",
+                "What steps can I take to repair my car's radiator?",
+                "Is there a way to troubleshoot radiator issues?",
+                "How do I go about fixing a faulty car radiator?",
+                "What are the possible solutions for radiator problems?",
+                "Can you provide guidance on repairing a car radiator?",
+                "I'm having issues with my car's radiator, what should I do?",
+                "What actions can I take to resolve radiator issues?",
+                "My radiator is malfunctioning, what steps should I take?",
+                "How do I troubleshoot radiator problems in my car?",
+                "What can I do to address radiator problems in my car?",
+                "I need assistance with fixing my car's radiator",
+                "What are the common fixes for radiator issues?",
+                "Can you suggest ways to rectify radiator issues?",
+                "What should I do if my car's radiator is not working properly?",
+                "What should I check if my car's radiator is leaking?",
+                "How do I inspect my car's radiator for problems?"
+            ],
+            "responses": [
+                "Here are a set of steps you can follow to diagnose the issue with your car radiator: <p><strong>Location:</strong> Can depend on the type of vehicle you own. In most cars, the radiator should be in the engine bay, mounted directly behind the grille. </p>  <p><strong>Step 1</strong> Visual Inspections: <br>Around it, in the connections between the radiator and the tubes, and especially underneath it, check for: wet spots, drips and puddles</p>  <p><strong>Step 2</strong> Hose and Connection inspection:<br>Inspect all hoses connected to the radiator for signs of wear, cracks, or leaks. Pay particular attention to hose connections and clamps. </p>   <p><strong>Step 3</strong> Pressure Inspection:</p> <p>WARNING : Turn off the car if on and wait at least a full 2 hours before proceeding with this step. </p> <p><strong>*Optional*</strong><br>Use a radiator pressure cap, replace the radiator cap with the pressure measurement tool and pump the tester to the recommended value and look for any drops in the pressure value. </p> <p>Another way to do it if do not own a tool similar to the one mentioned above, is to confirm that the car components temperature is low, then with your hands squeeze every radiator tube connection and listen for any suspicious hissing sounds, which can indicate a leak. </p>  "
+            ],
+            "context_set": "possible_car_issues_solution"
+        },
+
+        {
+            "tag": "define_car_transmission",
+            "patterns": [
+                "What is a car transmission?",
+                "Explain car transmission",
+                "What does 'car transmission' mean?",
+                "Define car transmission",
+                "Can you tell me about car transmissions?",
+                "What exactly is a car transmission?",
+                "Describe the function of a car transmission",
+                "I'm curious, what's a car transmission?",
+                "Please provide information on car transmissions",
+                "Could you clarify what a car transmission is?",
+                "Tell me more about car transmissions",
+                "How would you define a car transmission?",
+                "Elaborate on the concept of car transmission",
+                "I'm not clear about car transmissions, can you help?",
+                "Help me understand what a car transmission does",
+                "Can you shed some light on car transmissions?",
+                "Break down the role of car transmissions for me",
+                "Discuss car transmissions in detail",
+                "I'd like to know more about car transmissions",
+                "Could you explain the purpose of a car transmission?",
+                "Give me an overview of car transmissions",
+                "What role does a car transmission play?",
+                "I want to learn about car transmissions"
+            ],
+            "responses": [
+                "<p>A car transmission is a gearbox that transfers power from the engine to the wheels, controlling the speed and torque delivered to them. It allows you to adjust the gear ratios to match the engine's power output to the car's speed and driving conditions.</p>"
+            ],
+            "context_set": "definition_of_car_parts"
+        },
+        {
+            "tag": "define_car_transmission_function",
+            "patterns": [
+                "What does a car transmission do?",
+                "Explain the purpose of a car transmission",
+                "What is the role of a car transmission?",
+                "Define car transmission function",
+                "What exactly does a car transmission do?",
+                "Can you describe what a car transmission does?",
+                "What is the function of a car transmission?",
+                "Tell me about the purpose of car transmissions",
+                "I'm curious, what does a car transmission do?",
+                "Please provide information on the function of car transmissions",
+                "Could you clarify what the purpose of a car transmission is?",
+                "Help me understand what a car transmission does",
+                "Can you shed some light on the function of car transmissions?",
+                "Break down the role of car transmissions for me",
+                "Discuss the function of car transmissions in detail",
+                "I'd like to know more about the purpose of car transmissions",
+                "What role does a car transmission play?",
+                "I want to learn about the function of car transmissions",
+                "Could you explain the purpose of a car transmission?",
+                "Give me an overview of car transmission function",
+                "What does the car transmission do exactly?",
+                "What is the function of the car transmission?",
+                "Can you explain the purpose of car transmissions?",
+                "What purpose does a car transmission serve?",
+                "Describe the function of a car transmission"
+            ],
+            "responses": [
+                "<p><strong>Manages Engine Power: </strong> <p>Its function is to adjust the gear ratio to keep the engine running in its optimal zone, whether you're cruising at speed or accelerating from a stop. Without one your car would jerk violently back and forth as you drive or slow down. </p> <strong>Controls Speed and Efficiency: </strong> <p>It allows you to shift into higher gears for faster speeds or lower gears for more pulling power (like when towing or going up a hill). Another main function of car transmission is to match the engine speed to the driving speed, allowing you to save a fair amount of gas as well as prolong your car's life by limiting the amount of workload. </p></p>"
+            ],
+            "context_set": "definition_of_car_parts"
+        },
+        {
+            "tag": "car_transmission_issues",
+            "patterns": [
+                "My car transmission isn't working", 
+                "My car transmission won't work", 
+                "Transmission is broken", 
+                "Car transmission stopped working", 
+                "I'm having car transmission issues", 
+                "I'm experiencing issues with car transmission", 
+                "I can't get my transmission to work",
+                "My transmission is malfunctioning",
+                "My car won't shift gears",
+                "There's a problem with my transmission",
+                "My transmission is acting up",
+                "My transmission is giving me trouble",
+                "My car is having transmission problems",
+                "My transmission is faulty",
+                "My car won't move in gear",
+                "My car jerks when shifting gears",
+                "There's something wrong with my gearbox",
+                "My car's transmission is faulty",
+                "My transmission is making strange noises",
+                "My car won't engage gears",
+                "My transmission is slipping gears",
+                "My car's gears are grinding",
+                "My transmission fluid is leaking"
+            ],
+            "responses": [
+                "<p>Here is a list of some of the most common transmission issues for car transmission:</p> <strong>Slipping Gears:</strong> <p> The transmission out of nowhere shifts gears on its own, causing the car to jerk, slow down, or the engine to rev unexpectedly. </p> <strong> Grinding Noises: </strong> <p> Harsh grinding sounds when shifting gears, particularly in manual transmissions. </p> <strong>Fluid Leaks:</strong> <p> You might notice a reddish fluid under your car, near the transmission. Leaks can lead to serious damage if the fluid levels drop too low </p> <strong>Delayed Shifting or Hesitation:</strong> <p> There's a noticeable lag between when you put the car in gear and when it actually engages. This results in sluggish acceleration. </p> <strong>Burning Smell:</strong>  <p> A burning smell coming from the transmission is a sign of overheating fluid.  </p> <strong> Check Engine Light:</strong>  <p> The check engine light could illuminate on your dashboard for a variety of transmission-related problems. </p> </p> "
+            ],
+            "context_set": "car_issue"
+        },
+        {
+            "tag": "car_transmission_possible_solution",
+            "patterns": [
+                "How can I fix my transmission?",
+                "Can my car transmission be fixed?",
+                "Help me diagnose and troubleshoot my car transmission",
+                "Guide me to fix the car transmission",
+                "Step by step to fix a car transmission",
+                "What are the possible solutions for a faulty transmission?",
+                "What steps should I take to repair my car's transmission?",
+                "Is there a way to troubleshoot my car's transmission issues?",
+                "What can I do to address transmission problems in my car?",
+                "I need assistance with fixing my car's transmission",
+                "How do I go about repairing my car's transmission?",
+                "Can you provide guidance on fixing a faulty car transmission?",
+                "What should I do if my car transmission is not working properly?",
+                "What are the common solutions for transmission problems?",
+                "Can you suggest ways to rectify transmission issues?",
+                "How do I troubleshoot transmission problems in my car?",
+                "What actions can I take to resolve transmission issues?",
+                "I'm looking for solutions to repair my car's transmission"
+            ],
+            "responses": [
+                "<p><p><strong>Potential Fixes</strong></p> <strong>Fluid Inspection</strong> <p><strong>Identify the source of the leak:</strong> This could be a worn seal, gasket, or loose connection. </p> <p><strong>Check transmission fluid level and condition:</strong> Park the vehicle on a level surface, engage the parking brake, start the engine, and leave it on for a couple of minutes.</p> <p>Leave the car in neutral or park. Let the engine warm up and continue to run throughout the operation unless the vehicle's owner's manual says otherwise. (Be aware that some automatic transmission fluid levels are checked with the engine off. Check the owner's manual.)<p/>  <p>Locate the automatic transmission fluid dipstick, usually near where the transmission or transaxle meets, by the rear of the engine. It looks like the oil dipstick.</p> <p>Observe markings at the end of the dipstick, yours probably has two <strong>full</strong> markings, one for warm conditions and one for cold. If the automatic transmission fluid level falls below the <strong>warm</strong> line, you'll need to top up with automatic transmission fluid. </p> <strong>Grinding Noises:</strong><br> <strong> Jack up the vehicle and safely support it with jack stands. </strong> <p> Grab the wheel and tire assembly at the top and bottom (6 oclock and 12 oclock positions) and shake it back and forth paying attention to noises. If the wheel moves as you shake it, then it means that the hub is bad, and it needs replacement. </p> <p><strong>Visual Inspection:</strong><br> Make sure the vehicle has enough support and remove the wheel assembly. Look for signs of wear and check for friction material coming off of it. </p> <p> Remove the caliper or drum to inspect the brake pads. We're looking for brakes that are worn down to the backing plate or wear indicator. </p> <p><strong>Replace worn clutch disc and pressure plate:</strong> These components are responsible for smoothly engaging gears and wear and tear can cause grinding. <strong> (manual transmission only) </strong></p> <p><strong>Synchronizer ring replacement:</strong> Synchronizers help gears mesh smoothly and worn synchronizers can cause grinding. This usually requires a transmission rebuild, which is a complex and expensive repair. </p></p>"
+            ],
+            "context_set": "possible_car_issues_solution"
+        },
+
+        {
+            "tag": "define_car_engine",
+            "patterns": [
+                "car engine",
+                "engine definition",
+                "what is a car engine?",
+                "define engine",
+                "explanation of a car engine",
+                "engine meaning",
+                "car motor definition",
+                "definition of an engine",
+                "explanation of engine in a car",
+                "description of an engine",
+                "what powers a car",
+                "how cars move",
+                "car propulsion system",
+                "automobile engine explanation",
+                "car power source definition",
+                "internal combustion engine definition",
+                "how vehicles work",
+                "car machinery explanation",
+                "automotive motor description",
+                "vehicle propulsion system",
+                "description of car machinery",
+                "how automobiles operate",
+                "engine function explanation",
+                "car components overview",
+                "how cars function"
+            ],
+            "responses": [
+                "A car engine, also known as an automotive engine, is the primary component responsible for generating power to propel the vehicle. It converts fuel into mechanical energy, which is used to drive the wheels and various other systems in the car."
+            ],
+            "context_set": "definition_of_car_parts"
+        },
+        {
+            "tag": "define_car_engine_function",
+            "patterns": [
+                "what does the engine in my car do?",
+                "explain the purpose of a car's engine",
+                "why do cars have engines?",
+                "what is the engine's role in a vehicle?",
+                "can you tell me about the role of a car engine?",
+                "describe the function of an automobile engine",
+                "how does a car engine work?",
+                "what exactly is the job of a car engine?",
+                "what's the function of the engine in a vehicle?",
+                "what's the engine's function in a car?",
+                "explain car engine purpose",
+                "car engine function",
+                "automobile engine role",
+                "vehicle engine purpose",
+                "how car engines work",
+                "role of engine in vehicle",
+                "car motor function",
+                "internal combustion engine function",
+                "why cars need engines",
+                "mechanics of car engines",
+                "describe car engine operation",
+                "functionality of automobile engine",
+                "purpose of engine in car",
+                "how automotive engines function",
+                "car machinery function"
+            ],
+            "responses": [
+                "<p> A car engine, or more specifically an internal combustion engine in most cases, is a complex machine designed to convert the chemical energy stored in fuel like gasoline or diesel, into mechanical energy or rotational motion, which is sent to the car's wheels. This process happens in a series of precise steps, known as the four stroke cycle: </p> <strong> Intake Stroke: </strong> <p> The piston moves downwards in the cylinder, creating a vacuum chamber, then an intake valve opens, creating a mixture of air and fuel <strong>(gasoline vapor in modern engines)</strong>, by pulling it into the cylinder with the vacuum. The exhaust valve remains closed during this process.</p> <strong> Compression Stroke: </strong> <p> With both intake and exhaust valves closed, the piston moves upwards in the cylinder, compressing the air and fuel mixture. This compression increases the temperature and pressure of the mixture by a lot, making it more readily ignitable. </p> <strong> Combustion Stroke: </strong> <p> The spark plug in gasoline engines or high pressure and heat in diesel engines, ignites the compressed air and fuel mixture, the explosive burn significantly increases in pressure and temperature within the cylinder. This force pushes the piston downwards with huge power, generating mechanical work. </p> <strong> Exhaust Stroke: </strong> <p> The exhaust valve opens as the piston reaches the bottom of the cylinder. The piston moves upwards again as a result of the mechanical work, forcing the burned gases out of the cylinder through the open exhaust valve, but the intake valve remains closed during this process </p> <p> This four stroke cycle repeats continuously as long as the engine is running. The rotation of the crankshaft converts the reciprocating (up-and-down) motion of the piston into rotational motion that is eventually transmitted to the car's wheels. </p> "
+            ],
+            "context_set": "definition_of_car_parts"
+        },
+        {
+            "tag": "car_engine_issue",
+            "patterns": [
+                "common engine problems",
+                "engine troubles",
+                "frequent engine issues",
+                "typical car engine problems",
+                "common automotive engine troubles",
+                "engine malfunction details",
+                "engine failure causes",
+                "frequent car engine faults",
+                "common motor issues",
+                "car engine failure reasons",
+                "engine problem details",
+                "common vehicle engine issues",
+                "car motor troubles",
+                "engine breakdown causes",
+                "common automobile engine problems",
+                "my car engine won't start",
+                "car engine clicking but not starting",
+                "engine starts but dies shortly after",
+                "car engine cranks but won't start",
+                "car engine cranks but doesn't start",
+                "my car engine isn't working",
+                "my car engine won't start"
+
+            ],
+            "responses": [
+                "<p><p>Here are some of the most common car engine issues, along with specific details:</p> <strong>The car wont's start:</strong> <p><strong>Battery:</strong> <br>Is so far the most common issue that car owners encounter, leaving the lights on by accident, weather conditions, corrosion, and loose terminal connections are the most common causes.</p> <p><strong>Starter Motor:</strong><br> A clicking sound outside under the hood when turning the key to start the car. Worn brushes, faulty solenoid, damaged wiring, or beyond the components sometimes the starter motor itself malfunctions.</p> <p><strong>Fuel Pump:</strong><br> Engine starts but dies shortly after, which could be because of a fuel pump that might not generate enough pressure to the fuel injection system.</p> <p><strong>Ignition System:</strong><br> Engine cranks but doesn't start, usually because of a faulty spark plug, ignition coil, or could be the crankshaft position sensor that is not working properly<p> <p><strong>Security System</strong><br> Engine cranks but doesn't start, and there are no unusual noises present, in some cases, the car security systems can immobilize the vehicle if they malfunction or detect suspicious activity attempts.</p> <strong>Leaking Engine Coolant:</strong><p>Leaks can originate from various components such as:</p><p><strong>Radiator hoses:</strong> <br>Cracks or loose connections in the hoses can cause leaks.</p> <p><strong>Water pump:</strong><br> A failing water pump can leak coolant internally or externally.</p> <p><strong>Thermostat housing:</strong><br> A faulty housing gasket can leak coolant.</p> <p><strong>Radiator:</strong> <br>In rare cases, the radiator itself might develop a crack and leak.</p> <strong>Excessive Oil Consumption:</strong> <p>Burning oil smell or blue smoke coming out of the exhaust might be due to:</p> <p><strong>Worn Piston Rings:</strong><br> With a worn piston ring, is easier for oil to fall deep into the combustion chamber.</p> <p><strong>Valve Seal:</strong> Worn valve seals can allow oil to leak into the cylinder head and get burned. </p> <p><strong>Positive Crankcase Ventilation:</strong> A faulty PCV valve can lead to oil burning, leaks, and excessive oil pressure. </p> <strong>Check Engine Light:</strong>  <p>The check engine light comes up on the dashboard. Although this doesn't always indicate a major issue, it does deserve attention. </p> <p><strong>Emission System:</strong><br>Faulty sensors or components can trigger the light</p> <p><strong>Loose Gas Cap:</strong> <br>This also triggers the check engine light meaning potential fuel system issues as well as by something minor.<p> <strong>Overheating:</strong> <p>Dashboard shows engine running hotter than usual.</p> <p><strong>Low Coolant:</strong><br>Possible issues may maybe due to coolant boiling, causing lack of circulation in the engine, and so emptying your tank.</p> <p><strong>Faulty Thermostat:</strong><br>A stuck closed thermostat can prevent coolant from circulating properly. </p> <p><strong>Cooling Fan:</strong><br>It is possible that the fan is not drawing enough air or none at all through the radiator.</p> <strong>Remember:</strong> <p> This list provides general information, and the specific cause of your car not starting could be different. If you're facing this issue, it's recommended to seek professional help from a qualified mechanic for an accurate diagnosis and repair, which you can schedule with ease in our app.</p> </p>"
+            ],
+            "context_set": "car_issue"
+        },
+        {
+            "tag": "car_engine_possible_solution",
+            "patterns": [
+                "Help me fix my car engine.",
+                "Can you tell me how to fix my engine?",
+                "I need assistance with my car engine.",
+                "My car engine isn't working, what should I do?",
+                "What steps can I take to fix my car engine?",
+                "My engine won't start, how do I fix it?",
+                "How can I troubleshoot my car engine?",
+                "What's the best way to repair a car engine?",
+                "Tell me how to diagnose and repair my engine.",
+                "What should I check if my car engine won't turn over?",
+                "I'm having issues with my engine, can you help me?",
+                "How do I address problems with my car's engine?",
+                "My engine is acting up, what should I do?",
+                "Can you provide guidance on fixing my engine?",
+                "I'm looking for solutions to fix my car engine."
+            ],
+            "responses": [
+                "<p>If you're experiencing trouble starting your car, there are a few things you can try. </p> <p><strong>Firstly</strong>, ensure that all electrical features are turned off, and then attempt to jump start the car. If that doesn't work, check for any clicking noises when you turn the key, as this could indicate a bad starter. </p> <p><strong>Then</strong> you can also inspect the battery cables and connections for any corrosion or looseness. If you're comfortable, you can try cleaning the battery terminals or even replacing the battery. </p> <p>Take a close look at the <strong>spark plugs</strong>. If they're worn, damaged, or covered in deposits, it's time for replacements.</p> <p>Check the <strong>ignition wires</strong> for cracks, breaks, or corrosion. Replace any damaged wires.</p> <p>If everything looks good with the ignition system components, you might want to check the ignition coil and crankshaft position sensor for faults if the engine still won't start.</p> <p>If none of these solutions work, it might be time to call a <strong>mechanic</strong> for further assistance.</p>"
+            ],
+            "context_set": "definition_of_car_parts"
+        },
+        {
+            "tag": "define_car_battery",
+            "patterns": [
+                "car battery",
+                "define car battery",
+                "car battery function",
+                "what does a car battery do",
+                "car battery explanation",
+                "explain car battery",
+                "car battery meaning",
+                "car battery description",
+                "describe car battery",
+                "define what is a car batterry",
+                "car battery purpose",
+                "whats a car baterry"
+            ],
+            "responses": [
+                "A car battery is a rechargeable battery that supplies electrical current to a motor vehicle. Its main purpose is to feed the starter, which starts the engine. Once the engine is running, power for the car's electrical systems is supplied by the alternator."
+            ],
+            "context_set": "definition_of_car_parts"
+        },
+        {
+            "tag": "define_car_battery_function",
+            "patterns": [
+                "what does a car battery do?",
+                "explain the purpose of a car battery",
+                "why do cars have batteries?",
+                "what is the battery's role in a vehicle?",
+                "can you tell me about the role of a car battery?",
+                "describe the function of a car battery",
+                "how does a car battery work?",
+                "what exactly is the job of a car battery?",
+                "what's the function of the battery in a vehicle?",
+                "what's the battery's function in a car?",
+                "explain car battery purpose",
+                "car battery function",
+                "automobile battery role",
+                "vehicle battery purpose",
+                "how car batteries work",
+                "role of battery in vehicle",
+                "car battery function",
+                "car battery purpose",
+                " what's the function of the car battery?",
+                "what does the car battery do exactly?"
+            ],
+            "responses": [
+                "<p>Its main <strong>role is</strong> to provide electrical current to the electric starter motor, which in turn initiates the chemical process that powers the internal combustion engine. The alternator then recharges the battery as necessary.</p> <p><strong>Modern car batteries</strong> are typically lead-acid type and operate on 12-volt systems in most vehicles. They are optimized for short bursts of high current but are not designed for deep discharge. Proper maintenance, such as checking for corrosion and sulfation, helps prolong battery life. Recycling car batteries is important to minimize environmental impact and recover valuable materials like lead.</p> "
+            ],
+            "context_set": "definition_of_car_parts"
+        },
+        {
+            "tag": "car_battery_issue",
+            "patterns": [
+                "car battery not holding charge",
+                "how to fix dead car battery",
+                "reasons for car battery drainage",
+                "how to prevent car battery drain",
+                "fix loose car battery terminals",
+                "signs of old car battery",
+                "alternator not charging car battery",
+                "how to clean corroded battery terminals",
+                "impact of extreme temperatures on car battery",
+                "swollen car battery case",
+                "leaking fluid from car battery",
+                "how to check car battery cells",
+                "effect of poor driving habits on car battery",
+                "why does car battery keep dying",
+                "steps to troubleshoot car battery issues",
+                "create me a list of the most common car battery problems",
+                "car battery problems",
+                "car battery issues",
+                "car battery not working",
+                "car battery won't start",
+                "car battery not charging",
+                "car battery not holding charge",
+                "car battery keeps dying",
+                "car battery draining faster than usual"
+            ],
+            "responses": [
+                "<p><strong>Car batteries</strong> typically last a few years, and if yours has been acting up lately, it might be time for a replacement. Before shelling out for a new one, it's wise to check for common issues and their fixes. Here's a rundown of the 12 most frequent problems to look for:</p> <p><strong>Dead Battery:</strong><br> This is often the main issue. Your battery may be drained due to long periods of inactivity, a faulty alternator, old age, or corrosion on the terminals. Try charging it or jump-starting the vehicle.</p> <p><strong>Forgotten Headlights:</strong><br> Leaving your headlights on without the engine running can drain the battery. Turn them off as soon as you notice and consider jump-starting if needed.</p> <p><strong>Loose Battery Terminals:</strong><br> Check for loose connections or corrosion on the terminals. Clean them and tighten them if necessary.</p> <p><strong>Old Battery:</strong> <br> Car batteries typically last 3-5 years. If yours is showing signs of deterioration, it might be time to replace it.</p> <p><strong>Charging Problem:</strong> <br> If your alternator fails, your battery won't charge properly. Test the alternator's voltage output to determine if it needs replacing.</p> <p><strong>Corroded Terminals:</strong> <br> Corrosion on terminals can disrupt the electrical connection. Clean them and consider using anti-corrosion felt washers.</p> <p><strong>Extreme Temperatures:</strong> <br> Cold weather can drain batteries faster, while high heat can reduce performance. Park your vehicle in sheltered areas when possible.</p> <p><strong>Swollen Battery Case:</strong> <br> A swollen or bulging battery case indicates internal damage and should be replaced.</p> <p><strong>Leaking Fluid:</strong> <br> Fluid leaks can indicate overcharging or damage. Neutralize the acid, clean the area, and address the cause of the leak.</p> <p><strong>Damaged Cells:</strong> <br> If one or more cells are damaged, the battery won't hold a full charge and needs replacing.</p> <p><strong>Poor Driving Habits:</strong> <br> Frequent short trips without allowing the battery to recharge fully, or excessive accessory use, can drain the battery. Adjust your driving habits accordingly.</p> <p>By identifying and addressing these common issues, you can extend the life of your car battery and avoid unexpected breakdowns.</p> "
+            ],
+            "context_set": "car_issue"
+        },
+        {
+            "tag": "car_battery_possible_solution",
+            "patterns": [
+                "Fix dead car battery",
+                "Repair loose battery terminals",
+                "Solutions for car battery problems",
+                "Troubleshoot dead car battery",
+                "help me fix my dead car battery",
+                "tell me how to fix a car battery that won't start",
+                "create me a list of possible solutions for a car battery",
+                "how to fix dead car battery",
+                "how to fix loose car battery terminals",
+                "replace old car battery",
+                "solve car battery charging problem",
+                "how to prevent corrosion on battery terminals",
+                "solutions for swollen car battery case",
+                "tell me how to fix leaking car battery",
+                "tell me how to fix a car battery",
+                "how to troubleshoot car battery issues",
+                "what are the steps to repair a car battery",
+                "Addressing car battery corrosion",
+                "Repair options for car battery"
+            ],
+            "responses": [
+                "<p>Here’s a list of solutions for the mentioned <strong>car battery issues</strong>:</p> <p><strong>Dead Battery:</strong><br> Charge the battery or jump-start the vehicle. Check for long periods of inactivity, a faulty alternator, old age, or corrosion on the terminals. </p> <p><strong>Loose Battery Terminals:</strong><br> Tighten loose connections and clean corrosion on the terminals. </p> <p><strong>Old Battery:</strong><br> Replace the battery if it's showing signs of deterioration, typically after 3-5 years. </p> <p><strong>Charging Problem:</strong><br> Test the alternator's voltage output to determine if it needs replacement. </p> <p><strong>Corroded Terminals:</strong><br> Park the vehicle in sheltered areas to prevent draining in cold weather or reduced performance in high heat. </p> <p><strong>Swollen Battery Case:</strong><br> Replace the battery if the case is swollen or bulging. </p> <p><strong>Leaking Fluid:</strong><br> Neutralize the acid, clean the area, and address the cause of the leak. </p> <p><strong>Damaged Cells:</strong><br> Replace the battery if one or more cells are damaged and the battery won't hold a full charge. </p> <p><strong>Poor Driving Habit:</strong><br> Avoid frequent short trips without allowing the battery to recharge fully. Reduce excessive accessory use to prevent draining. </p> "
+            ],
+            "context_set": "possible_car_issues_solution"
+        },
+        {
+            "tag": "define_car_break",
+            "patterns": ["what is a car brake ?", "whats a car brake ?", "whats a brake ?", "define brake"],
+            "responses": [
+                "A brake is a mechanical device that inhibits motion by absorbing energy from a moving system. It is used for slowing or stopping a moving vehicle, wheel, axle, or to prevent its motion, most often accomplished by means of friction."
+            ],
+            "context_set": "definition_of_car_parts"
+        },
+        {
+            "tag": "define_car_clutch",
+            "patterns": ["what is a car clutch ?", "whats a car clutch ?", "whats a clutch ?", "define clutch"],
+            "responses": [
+                "A clutch is a mechanical device that engages and disengages power transmission, especially from the driving shaft to the driven shaft. In the simplest application, clutches connect and disconnect two rotating shafts (drive shafts or line shafts)."
+            ],
+            "context_set": "definition_of_car_parts"
+        },
+        {
+            "tag": "define_car_gear",
+            "patterns": ["define car gear ?", "what a car gear ?", "whats is a car gear ?", "define cogwheel"],
+            "responses": [
+                "A gear or cogwheel is a rotating machine part having cut teeth or, in the case of a cogwheel, inserted teeth (called cogs), which mesh with another toothed part to transmit torque."
+            ],
+            "context_set": "definition_of_car_parts"
+        },
+        {
+            "tag": "define_car_steering",
+            "patterns": ["what is a steering ?", "whats a steering ?", "whats a steering ?", "define steering"],
+            "responses": [
+                "A steering is the collection of components, linkages, etc. which allows any vehicle to follow the desired course. An exception is the case of rail transport by which rail tracks combined together with railroad switches provide the steering function."
+            ],
+            "context_set": "definition_of_car_parts"
+        },
+        {
+            "tag": "blood_pressure",
+            "patterns": [
+                "Open blood pressure module",
+                "Task related to blood pressure",
+                "Blood pressure data entry",
+                "I want to log my blood pressure",
+                "Blood pressure data management"
+            ],
+            "responses": ["Navigating to the Blood Pressure module"],
+            "context_set": "blood_pressure"
+        },
+        {
+            "tag": "blood_pressure_search",
+            "patterns": [
+                "I want to search for blood pressure data",
+                "Blood pressure data search",
+                "Find blood pressure data",
+                "Search for blood pressure data"
+            ],
+            "responses": ["Please provide the Patient ID for blood pressure data"],
+            "context_set": "blood_pressure_search"
+        }
+    ]
+}
