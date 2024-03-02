@@ -17,6 +17,13 @@ import string
 import json
 import os
 
+from thinc.api import prefer_gpu
+
+# Use GPU if available
+if prefer_gpu():
+    print("Using GPU!")
+else:
+    print("Using CPU :(")
 
 
 # Import the intents.json file
@@ -60,7 +67,7 @@ for i in range(10):
     losses = {}
 
     # Batch the examples and iterate over them
-    for batch in minibatch(train_data, size=8):
+    for batch in minibatch(train_data, size=32):
         for example in batch:
             # Update the model
             nlp.update([example], sgd=optimizer, losses=losses)
