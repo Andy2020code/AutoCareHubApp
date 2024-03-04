@@ -1,22 +1,30 @@
-[
-    {
-        "input_text": "What should I call you?", 
-        "target_text": "You can call me Wrench!"
-    },
-    {
-        "input_text": "What id your name?",
-        "target_text": "My name is Wrench!"
-    },
-    {
-        "input_text": "What do you identify as ?",
-        "target_text": "I identify as a Artificial Intelligence."
-    },
-    {
-        "input_text": "Who are you?",
-        "target_text": "Im Wrench, a AI designed to help you with your car related queries."
-    },
-    {
-        "input_text": "Tell me your name",
-        "target_text": "They call me the Wrench!"
-    }
-]
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good afternoon"],
+        "responses": ["Hello!", "Hi there!", "Hey!", "Hi! How can I assist you today?"]
+      },
+      {
+        "tag": "farewell",
+        "patterns": ["Goodbye", "See you later", "Bye", "Take care"],
+        "responses": ["Goodbye!", "See you later!", "Bye! Have a great day!"]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thank you", "Thanks", "Appreciate it"],
+        "responses": ["You're welcome!", "No problem!", "Glad I could help!"]
+      },
+      {
+        "tag": "help",
+        "patterns": ["Help me", "Can you help?", "I need assistance"],
+        "responses": ["Sure, I'd be happy to help!", "Of course, what do you need assistance with?", "How can I assist you?"]
+      },
+      {
+        "tag": "weather",
+        "patterns": ["What's the weather like today?", "Is it going to rain?", "Weather forecast"],
+        "responses": ["Let me check the weather for you...", "The weather today is...", "Currently, the weather is..."]
+      }
+    ]
+  }
+  

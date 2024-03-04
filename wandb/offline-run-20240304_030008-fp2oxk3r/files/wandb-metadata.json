@@ -1,0 +1,53 @@
+{
+    "os": "Windows-10-10.0.22631-SP0",
+    "python": "3.11.5",
+    "heartbeatAt": "2024-03-04T08:00:08.942304",
+    "startedAt": "2024-03-04T08:00:08.861449",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\ander\\Documents\\GitHub\\AutoCareHubApp\\train_tokenizer.py",
+    "codePathLocal": "train_tokenizer.py",
+    "codePath": "train_tokenizer.py",
+    "git": {
+        "remote": "https://github.com/Andy2020code/AutoCareHubApp.git",
+        "commit": "c5172fc33bdd06000f8dc30a0d284d160525d9b5"
+    },
+    "email": "144275177+Andy2020code@users.noreply.github.com",
+    "root": "C:/Users/ander/Documents/GitHub/AutoCareHubApp",
+    "host": "AndysPC",
+    "username": "ander",
+    "executable": "C:\\Users\\ander\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "cpu_count": 12,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 3701.0,
+        "min": 0.0,
+        "max": 3701.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3701.0,
+            "min": 0.0,
+            "max": 3701.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 952.4199714660645,
+            "used": 346.1740531921387
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3070",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3070",
+            "memory_total": 8589934592
+        }
+    ],
+    "memory": {
+        "total": 47.92966079711914
+    }
+}

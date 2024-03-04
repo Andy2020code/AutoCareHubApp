@@ -1,0 +1,37 @@
+2024-03-04 04:22:37,433 INFO    StreamThr :29352 [internal.py:wandb_internal():86] W&B internal server running at pid: 29352, started at: 2024-03-04 04:22:37.432407
+2024-03-04 04:22:37,437 DEBUG   HandlerThread:29352 [handler.py:handle_request():146] handle_request: status
+2024-03-04 04:22:37,439 INFO    WriterThread:29352 [datastore.py:open_for_write():87] open: C:\Users\ander\Documents\GitHub\AutoCareHubApp\wandb\offline-run-20240304_042237-p2oi6ohq\run-p2oi6ohq.wandb
+2024-03-04 04:22:37,479 DEBUG   HandlerThread:29352 [handler.py:handle_request():146] handle_request: run_start
+2024-03-04 04:22:37,499 DEBUG   HandlerThread:29352 [system_info.py:__init__():27] System info init
+2024-03-04 04:22:37,500 DEBUG   HandlerThread:29352 [system_info.py:__init__():42] System info init done
+2024-03-04 04:22:37,500 INFO    HandlerThread:29352 [system_monitor.py:start():194] Starting system monitor
+2024-03-04 04:22:37,501 INFO    HandlerThread:29352 [system_monitor.py:probe():214] Collecting system info
+2024-03-04 04:22:37,501 INFO    SystemMonitor:29352 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-03-04 04:22:37,503 INFO    SystemMonitor:29352 [interfaces.py:start():190] Started cpu monitoring
+2024-03-04 04:22:37,507 INFO    SystemMonitor:29352 [interfaces.py:start():190] Started disk monitoring
+2024-03-04 04:22:37,509 INFO    SystemMonitor:29352 [interfaces.py:start():190] Started gpu monitoring
+2024-03-04 04:22:37,510 INFO    SystemMonitor:29352 [interfaces.py:start():190] Started memory monitoring
+2024-03-04 04:22:37,515 INFO    SystemMonitor:29352 [interfaces.py:start():190] Started network monitoring
+2024-03-04 04:22:37,525 DEBUG   HandlerThread:29352 [system_info.py:probe():151] Probing system
+2024-03-04 04:22:37,527 DEBUG   HandlerThread:29352 [system_info.py:_probe_git():136] Probing git
+2024-03-04 04:22:37,578 DEBUG   HandlerThread:29352 [system_info.py:_probe_git():144] Probing git done
+2024-03-04 04:22:37,578 DEBUG   HandlerThread:29352 [system_info.py:probe():199] Probing system done
+2024-03-04 04:22:37,578 DEBUG   HandlerThread:29352 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22631-SP0', 'python': '3.11.5', 'heartbeatAt': '2024-03-04T09:22:37.525408', 'startedAt': '2024-03-04T09:22:37.424407', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'C:\\Users\\ander\\Documents\\GitHub\\AutoCareHubApp\\train_tokenizer.py', 'codePathLocal': 'train_tokenizer.py', 'codePath': 'train_tokenizer.py', 'git': {'remote': 'https://github.com/Andy2020code/AutoCareHubApp.git', 'commit': 'c5172fc33bdd06000f8dc30a0d284d160525d9b5'}, 'email': '144275177+Andy2020code@users.noreply.github.com', 'root': 'C:/Users/ander/Documents/GitHub/AutoCareHubApp', 'host': 'AndysPC', 'username': 'ander', 'executable': 'c:\\Users\\ander\\AppData\\Local\\Programs\\Python\\Python311\\python.exe', 'cpu_count': 12, 'cpu_count_logical': 24, 'cpu_freq': {'current': 3701.0, 'min': 0.0, 'max': 3701.0}, 'cpu_freq_per_core': [{'current': 3701.0, 'min': 0.0, 'max': 3701.0}], 'disk': {'/': {'total': 952.4199714660645, 'used': 346.5127487182617}}, 'gpu': 'NVIDIA GeForce RTX 3070', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3070', 'memory_total': 8589934592}], 'memory': {'total': 47.92966079711914}}
+2024-03-04 04:22:37,578 INFO    HandlerThread:29352 [system_monitor.py:probe():224] Finished collecting system info
+2024-03-04 04:22:37,579 INFO    HandlerThread:29352 [system_monitor.py:probe():227] Publishing system info
+2024-03-04 04:22:37,580 INFO    HandlerThread:29352 [system_monitor.py:probe():229] Finished publishing system info
+2024-03-04 04:22:37,593 DEBUG   HandlerThread:29352 [handler.py:handle_request():146] handle_request: python_packages
+2024-03-04 04:22:42,466 DEBUG   HandlerThread:29352 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:22:42,466 DEBUG   SenderThread:29352 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:22:47,498 DEBUG   HandlerThread:29352 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:22:47,498 DEBUG   SenderThread:29352 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:22:52,539 DEBUG   HandlerThread:29352 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:22:52,539 DEBUG   SenderThread:29352 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:22:57,580 DEBUG   HandlerThread:29352 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:22:57,580 DEBUG   SenderThread:29352 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:23:02,609 DEBUG   HandlerThread:29352 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:23:02,609 DEBUG   SenderThread:29352 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:23:07,636 DEBUG   HandlerThread:29352 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:23:07,636 DEBUG   SenderThread:29352 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:23:12,659 DEBUG   HandlerThread:29352 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:23:12,659 DEBUG   SenderThread:29352 [sender.py:send_request():409] send_request: status_report

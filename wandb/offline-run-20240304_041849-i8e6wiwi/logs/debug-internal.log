@@ -1,0 +1,62 @@
+2024-03-04 04:18:49,395 INFO    StreamThr :12268 [internal.py:wandb_internal():86] W&B internal server running at pid: 12268, started at: 2024-03-04 04:18:49.395536
+2024-03-04 04:18:49,399 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status
+2024-03-04 04:18:49,401 INFO    WriterThread:12268 [datastore.py:open_for_write():87] open: C:\Users\ander\Documents\GitHub\AutoCareHubApp\wandb\offline-run-20240304_041849-i8e6wiwi\run-i8e6wiwi.wandb
+2024-03-04 04:18:49,444 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: run_start
+2024-03-04 04:18:49,465 DEBUG   HandlerThread:12268 [system_info.py:__init__():27] System info init
+2024-03-04 04:18:49,465 DEBUG   HandlerThread:12268 [system_info.py:__init__():42] System info init done
+2024-03-04 04:18:49,465 INFO    HandlerThread:12268 [system_monitor.py:start():194] Starting system monitor
+2024-03-04 04:18:49,466 INFO    HandlerThread:12268 [system_monitor.py:probe():214] Collecting system info
+2024-03-04 04:18:49,466 INFO    SystemMonitor:12268 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-03-04 04:18:49,467 INFO    SystemMonitor:12268 [interfaces.py:start():190] Started cpu monitoring
+2024-03-04 04:18:49,474 INFO    SystemMonitor:12268 [interfaces.py:start():190] Started disk monitoring
+2024-03-04 04:18:49,475 INFO    SystemMonitor:12268 [interfaces.py:start():190] Started gpu monitoring
+2024-03-04 04:18:49,476 INFO    SystemMonitor:12268 [interfaces.py:start():190] Started memory monitoring
+2024-03-04 04:18:49,484 DEBUG   HandlerThread:12268 [system_info.py:probe():151] Probing system
+2024-03-04 04:18:49,484 INFO    SystemMonitor:12268 [interfaces.py:start():190] Started network monitoring
+2024-03-04 04:18:49,492 DEBUG   HandlerThread:12268 [system_info.py:_probe_git():136] Probing git
+2024-03-04 04:18:49,544 DEBUG   HandlerThread:12268 [system_info.py:_probe_git():144] Probing git done
+2024-03-04 04:18:49,545 DEBUG   HandlerThread:12268 [system_info.py:probe():199] Probing system done
+2024-03-04 04:18:49,545 DEBUG   HandlerThread:12268 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22631-SP0', 'python': '3.11.5', 'heartbeatAt': '2024-03-04T09:18:49.484535', 'startedAt': '2024-03-04T09:18:49.386536', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'C:\\Users\\ander\\Documents\\GitHub\\AutoCareHubApp\\train_tokenizer.py', 'codePathLocal': 'train_tokenizer.py', 'codePath': 'train_tokenizer.py', 'git': {'remote': 'https://github.com/Andy2020code/AutoCareHubApp.git', 'commit': 'c5172fc33bdd06000f8dc30a0d284d160525d9b5'}, 'email': '144275177+Andy2020code@users.noreply.github.com', 'root': 'C:/Users/ander/Documents/GitHub/AutoCareHubApp', 'host': 'AndysPC', 'username': 'ander', 'executable': 'c:\\Users\\ander\\AppData\\Local\\Programs\\Python\\Python311\\python.exe', 'cpu_count': 12, 'cpu_count_logical': 24, 'cpu_freq': {'current': 3701.0, 'min': 0.0, 'max': 3701.0}, 'cpu_freq_per_core': [{'current': 3701.0, 'min': 0.0, 'max': 3701.0}], 'disk': {'/': {'total': 952.4199714660645, 'used': 346.5100975036621}}, 'gpu': 'NVIDIA GeForce RTX 3070', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3070', 'memory_total': 8589934592}], 'memory': {'total': 47.92966079711914}}
+2024-03-04 04:18:49,545 INFO    HandlerThread:12268 [system_monitor.py:probe():224] Finished collecting system info
+2024-03-04 04:18:49,545 INFO    HandlerThread:12268 [system_monitor.py:probe():227] Publishing system info
+2024-03-04 04:18:49,546 INFO    HandlerThread:12268 [system_monitor.py:probe():229] Finished publishing system info
+2024-03-04 04:18:49,561 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: python_packages
+2024-03-04 04:18:54,434 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:18:54,434 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:18:59,453 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:18:59,454 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:19:04,497 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:19:04,498 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:19:09,543 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:19:09,544 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:19:14,589 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:19:14,590 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:19:19,620 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:19:19,620 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:19:24,660 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:19:24,660 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:19:29,687 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:19:29,687 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:19:34,715 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:19:34,715 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:19:39,742 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:19:39,742 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:19:44,758 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:19:44,758 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:19:49,495 DEBUG   SystemMonitor:12268 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-03-04 04:19:49,778 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:19:49,778 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:19:54,801 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:19:54,801 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:19:59,822 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:19:59,822 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:20:04,852 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:20:04,853 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:20:09,868 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:20:09,868 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:20:14,901 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:20:14,901 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:20:19,938 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:20:19,938 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
+2024-03-04 04:20:24,958 DEBUG   HandlerThread:12268 [handler.py:handle_request():146] handle_request: status_report
+2024-03-04 04:20:24,958 DEBUG   SenderThread:12268 [sender.py:send_request():409] send_request: status_report
