@@ -1,0 +1,39 @@
+1 ABS Module 
+    [Is a compact electronic component integral to the anti-lock braking system, responsible for controlling brake actuation to individual wheels and aiding in traction and stability control.'] 
+    [Functions as a computerized controller within the anti-lock braking system. It regulates brake pressure to individual wheels, preventing them from locking up during sudden braking. By modulating brake pressure, it ensures optimal traction is maintained, allowing the wheels to continue rolling and enhancing vehicle stability. Additionally, it contributes to the operation of traction and stability control systems, promoting safer driving experiences.'] 
+    [It usually sits close to where the brake fluid is stored, which is usually at the front of the car under the hood. It's kind of like a small box that helps the brakes work better."] 
+
+2 ABS Sensor 
+    [Are components that detect the rotational speed of individual wheels in a vehicle. They provide crucial data to the anti-lock braking system (ABS) to prevent wheel lock-up during braking.'] 
+    [Are like little detectors near each wheel of a car. Their job is to figure out how fast each wheel is spinning. This information is super important for the anti-lock braking system (ABS), which helps prevent the wheels from locking up when you hit the brakes hard. So, basically, these sensors tell the car's brain how fast the wheels are turning so it can make sure you stop safely without skidding."] 
+    [Usually located near the brake rotor or hub assembly on each wheel of a vehicle. They're small, often round or cylindrical in shape, and can be found nestled close to components like the brake caliper or suspension parts."] 
+
+3 Body Control Module (BCM) 
+    [Is a computerized component responsible for managing and coordinating various electronic systems within the interior of a vehicle, including functions like door locks, window switches, heated seats, and sunroof controls.'] 
+    [Is like a small computer in your car that controls different electronic features inside. It's in charge of things like locking the doors, opening and closing the windows, adjusting heated seats, and operating the sunroof. Basically, it makes sure all these interior functions work smoothly and together."] 
+    [Usually found inside the cabin of the vehicle. It looks like a small box or module, often located under the dashboard or behind the glove compartment. Components like door locks, window switches, heated seats, and sunroof controls are typically located near the BCM because it controls these functions.'] 
+    
+4 Instrument Cluster 
+    [Is the set of gauges and indicators located behind the steering wheel in a vehicle, providing essential information to the driver about the vehicle's performance and status"] 
+    [Function of the instrument cluster is to show important information to the driver while they're driving. It has things like speedometers, showing how fast you're going, and fuel gauges, telling you how much gas you have left. It also has other indicators, like warning lights for problems with the engine or if a door is open. Basically, it's like a dashboard for the driver to keep track of what's going on with the car."] 
+    [Is right behind the steering wheel, where the driver can easily see it. It looks like a panel with different gauges and lights. It usually has things like a speedometer, fuel gauge, and warning lights. It's surrounded by the steering column and the dashboard."] 
+
+5 Odometer 
+    [A gauge in a car that shows how far the car has traveled since it was made. It's important because governments use it to track mileage on registered cars, and the value of a car depends on how many miles it's been driven. Keeping the odometer accurate is crucial for knowing how much a car has been used."] 
+    [In a car tells you how far the car has traveled since it was made. It helps keep track of the mileage on the car, which is important for knowing its value and usage.'] 
+    [Located on the dashboard of a car, near the speedometer and other gauges.'] 
+    
+6 Rear Defroster (Rear Defogger) 
+    [Is a vehicle component designed to clear ice and fog from the rear window by heating thin wires that run along the glass.'] 
+    [Functions by heating thin wires along the rear window to clear ice and fog, improving visibility for the driver.'] 
+    [Is located along the inside surface of the rear window of a vehicle.'] 
+
+7 Speedometer 
+    [Shows how fast a vehicle is moving, either in miles per hour or kilometers per hour. Older ones used cables, but newer ones are electronic.'] 
+    [Tells you how fast your vehicle is going, so you can drive safely and within the speed limits.'] 
+    [Located on the dashboard of a vehicle, typically in the driver's line of sight. It looks like a circular dial with numbers indicating speed and a moving needle or digital display showing the current speed."]
+
+8 Tachometer 
+    [Instrument found on vehicle dashboards that displays the engine speed in revolutions per minute (RPM).'] 
+    [Shows how fast the engine is spinning in revolutions per minute (RPM).'] 
+    [Located on the dashboard of a vehicle. It resembles a circular dial with numerical markings and a moving needle indicating RPM']

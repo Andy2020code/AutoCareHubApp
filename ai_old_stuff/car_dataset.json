@@ -1,0 +1,19 @@
+[
+  {
+      "context": "The Tesla Model S is an all-electric luxury sedan produced by Tesla, Inc. It features advanced autopilot capabilities and a large touchscreen display.",
+      "questions": [
+          {
+              "question": "What company produces the Tesla Model S?",
+              "answer": "Tesla, Inc."
+          },
+          {
+              "question": "What type of car is the Tesla Model S?",
+              "answer": "all-electric luxury sedan"
+          },
+          {
+              "question": "What are some features of the Tesla Model S?",
+              "answer": "advanced autopilot capabilities and a large touchscreen display"
+          }
+      ]
+  }
+]

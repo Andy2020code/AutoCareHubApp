@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/main/css/about.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/css/about.css' %}">
     <title>Blog | Auto Care Hub</title>
 </head>
 <body> 
@@ -94,170 +95,61 @@
 
     </section>
 
-    
     <div class="div-01-layout">
-
         <div class="div-01-body">
 
-            <div class="div-title">
-                <h1 class="div-01-title">Signup for our<br><span class="news-span">NEWSLETTER</span></h1>
+            <div class="left_body_01">
+                <h1>Real Impact on Enviroment</h1>
+                <p>
+                    Our goal is to promote sustainability in the automotive industry by adopting eco-friendly practices, cutting carbon emissions, minimizing waste, and encouraging the use of green technologies among mechanics and customers.
+                </p>
             </div>
 
-            <div class="devider-01"></div>
-
-            <div class="div-01-content">
-                <p>Stay up to date with the latest news and updates from Auto Hub Care.</p>
-                <input type="email" class="email-input" id="email" name="newsletter-email" placeholder="Enter your E-mail...">
-                <button class="email-button">Subscribe</button>
+            <div class="right_body_01">
+                <h1>Why be Eco-Friendly?</h1>
+                <p>
+                    Being eco-friendly makes sense because it saves money, keeps us healthy, and ensures we have resources for the future.
+                </p>
             </div>
         </div>
     </div>
-
-
-<style>
-.div-01-layout{
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0px;
-    background-color: #f44336;
-    padding: 20px 0px;
-}
-
-.div-01-body{
-    width: 90%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.div-title{
-    width: auto;
-    height: 90%;
-}
-
-.div-01-title{
-    padding: 10px;
-    border: 1px solid #fff;
-    border-radius: 10px;
-    color: #fff;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 50px;
-}
-
-.news-span{
-    font-size: 65px;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 100;
-    color: #000;
-}
-
-.devider-01{
-    width: 200px;
-    height: 1px;
-    border: 1px solid #fff;
-    background-color: #fff;
-    margin: 20px 0px;
-}
-
-.div-01-content{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.div-01-content p{
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    color: #fff;
-    margin: 20px 0px;
-}
-
-.email-input{
-    width: 300px;
-    height: 30px;
-    padding: 5px;
-    margin: 20px 0px;
-    border: 0px;
-}
-
-.email-button{
-    width: 150px;
-    height: 35px;
-    background-color: #fff;
-    border: 0px;
-    border-radius: 10px;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 20px;
-    transition: .3s;
-}
-
-.email-button:hover{
-    cursor: pointer;
-    background-color: #f44336;
-    border: 1px solid #fff;
-    color: #fff;
-}
-</style>
-
 
     <div class="div-02-layout">
         <div class="div-02-body">
-            <h1 class="title-div-02">What is Auto Care Hub?</h1>
-            <p class="content-01"><span class="red-highlighted">Auto Care Hub</span> serves as a comprehensive digital ecosystem, offering a streamlined approach to car care. From locating certified mechanics to evaluating service ratings, facilitating bookings, managing maintenance history, to fostering a community through insightful forums – AutoCare Hub integrates every facet of automotive service into a singular, efficient platform.</p>
+            <h1>How do we contribute:</h1>
         </div>
     </div>
 
-<style>
-.div-02-layout{
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0px;
-}
+    <div class="div-03-layout">
+        <div class="div-03-body">
+            <div class="left-body-03">
+                <h1>1</h1>
+                <p>Opting for LED lights, cuts down the use of electricity by around 80% compared to Incandescent or fluorescent bulbs. </p>
 
-.div-02-body{
-    width: 90%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    padding: 10px;
-}
+                <h1>2</h1>
+                <p>Rechargeable batteries help cut down costs, reduce waste and they can be used hundreds of times. Also having minimal environmental impact.</p>
 
-.title-div-02{
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 36px;
-    color: #8b2635;
-    margin: 20px 0px;
-}
+                <h1>3</h1>
+                <p>Integration of solar panels for the workstation, not only powers all the basic functions as well as recharge tools and work vehicles.</p>
 
-.content-01{
-    font-family: 'Rajdhani', sans-serif;
-    text-align: center;
-    font-weight: 300;
-    font-size: 20px;
-    color: #000;
-    margin: 20px 0px;
-}
+                <h1>4</h1>
+                <p>Recycle metal scraps, oil filters, batteries, tires, or other materials that are no longer needed, and sell them to a scrap yard or a recycling center. </p>
 
-.red-highlighted{
-    font-family: 'Bebas Neue', sans-serif;
-    color: #8b2635;
-}
-</style>
+                <h1>5</h1>
+                <p>Offer virtual consultations and diagnostics to reduce the need to travel and carbon emissions. </p>
+
+                <h1>6</h1>
+                <p>Providing educational resources to mechanics and customers about benefits of green practice as well as incentive the adoption of Ev’s.</p>
+
+                <h1>7</h1>
+                <p>Special hiring process as well as training so mechanics are ready to serve conventional and electric solutions to customers. </p>
+            </div>
+
+            <div class="right-body-03">
+                <img src="{% static 'main/IMG/about-page/img-04.jpeg' %}" alt="">
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

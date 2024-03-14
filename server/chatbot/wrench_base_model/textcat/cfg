@@ -1,0 +1,11 @@
+{
+  "labels":[
+    "GREETING",
+    "FEELINGS",
+    "GOODBYE",
+    "RADIATOR_DEFINITION",
+    "THANKS"
+  ],
+  "threshold":0.0,
+  "positive_label":null
+}
