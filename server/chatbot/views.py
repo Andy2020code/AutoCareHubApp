@@ -11,11 +11,11 @@ def home(request):
 
 ########################################################
 # Load the trained model
-model_path = os.path.join(os.path.dirname(__file__), "gpt2_qa_trained")
+model_path = os.path.join(os.path.dirname(__file__), "gpt2")
 if model_path is not None:
     print("Model found")
 
-model = GPT2LMHeadModel.from_pretrained(model_path)
+model = GPT2LMHeadModel.from_pretrained("gpt2")
 tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
 
 # Define the function to identify intent and return response
