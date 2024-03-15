@@ -12,6 +12,9 @@ def home(request):
 ########################################################
 # Load the trained model
 model_path = os.path.join(os.path.dirname(__file__), "gpt2_qa_trained")
+if model_path is not None:
+    print("Model found")
+
 model = GPT2LMHeadModel.from_pretrained(model_path)
 tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
 
@@ -29,7 +32,7 @@ def get_response(request, user_input):
             top_k=35,
             top_p=5.95,
             temperature=0.1,
-            num_beams=20,
+            num_beams=15,
             no_repeat_ngram_size=2,
             repetition_penalty=1.5,
             num_return_sequences=1
@@ -37,5 +40,6 @@ def get_response(request, user_input):
 
     # Decode the generated sequence to get the answer string
     answer = tokenizer.decode(output_ids[0], skip_special_tokens=True)
+    print(answer)
 
     return JsonResponse({"response": answer})

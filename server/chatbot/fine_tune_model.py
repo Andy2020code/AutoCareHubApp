@@ -4,8 +4,8 @@ import torch
 import json
 import os
 
-model = GPT2ForQuestionAnswering.from_pretrained('gpt2-large')
-tokenizer = GPT2Tokenizer.from_pretrained('gpt2-large')
+model = GPT2ForQuestionAnswering.from_pretrained('gpt2')
+tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 tokenizer.add_special_tokens({'pad_token': '[PAD]'})
 tokenizer.pad_token = '[PAD]'
 
@@ -113,11 +113,11 @@ def collate_fn(data):
 dataset = Q_A_DATASET(traning_encoded)
 
 #create a dataloader
-data_loader_01 = DataLoader(dataset, batch_size=10, shuffle=True, collate_fn=collate_fn)
+data_loader_01 = DataLoader(dataset, batch_size=90, shuffle=True, collate_fn=collate_fn)
 
 
 
-num_epochs = 50
+num_epochs = 20
 
 # Set up optimizer and scheduler
 optimizer = AdamW(model.parameters(), lr=3e-5)
@@ -164,5 +164,5 @@ for epoch in range(num_epochs):
     print(f"Epoch {epoch + 1}/{num_epochs}, Average Loss: {average_loss}")
 
 # Save trained model
-save_path = os.path.join(os.path.dirname(__file__), "gpt2_qa_trained")
+save_path = os.path.join(os.path.dirname(__file__), "server/chatbot/gpt2_qa_trained")
 model.save_pretrained("save_path")
