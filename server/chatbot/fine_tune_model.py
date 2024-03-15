@@ -113,11 +113,11 @@ def collate_fn(data):
 dataset = Q_A_DATASET(traning_encoded)
 
 #create a dataloader
-data_loader_01 = DataLoader(dataset, batch_size=80, shuffle=True, collate_fn=collate_fn)
+data_loader_01 = DataLoader(dataset, batch_size=10, shuffle=True, collate_fn=collate_fn)
 
 
 
-num_epochs = 20
+num_epochs = 50
 
 # Set up optimizer and scheduler
 optimizer = AdamW(model.parameters(), lr=3e-5)
