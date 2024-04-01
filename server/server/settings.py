@@ -143,4 +143,6 @@ CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
     'https://silvaroute.com',
     'https://www.silvaroute.com',
+    'http://silvaroute.com',
+    'http://www.silvaroute.com',
 ]
