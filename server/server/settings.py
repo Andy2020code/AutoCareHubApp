@@ -32,12 +32,6 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    'https://silvaroute.com',
-    'https://www.silvaroute.com',
-]
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -142,3 +136,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CORS_ALLOW_ALL_ORIGINS = False
+
+CORS_ALLOWED_ORIGINS = [
+    'https://silvaroute.com',
+    'https://www.silvaroute.com',
+]
