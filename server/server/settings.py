@@ -32,6 +32,11 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    'https://silvaroute.com',
+    'https://www.silvaroute.com',
+]
+
 
 # Application definition
 
@@ -48,6 +53,7 @@ INSTALLED_APPS = [
     'polls.apps.PollsConfig',
     'chatbot.apps.ChatbotConfig',
     'channels',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
