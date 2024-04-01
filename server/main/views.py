@@ -176,7 +176,7 @@ def car_info(request):
             data_instance = form.save(commit=False)
             data_instance.owner = request.user
             data_instance.save()
-            return redirect('last_maintenance')
+            return redirect('/last_maintenance')
     else:
         form = Car_info_form()
 
