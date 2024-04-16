@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.core.mail import send_mail
 
 from django.contrib.auth.models import User
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse
 
 from . forms import RegisterForm, PostForm, Car_info_form, leave_review_form, ServiceRequestForm, upcoming_maintenance_form, SubscriptionForm, BusinessCreationForm, leave_review_form_front_page
@@ -17,8 +17,6 @@ from scheduler.models import Event
 
 import stripe
 stripe.api_key = "pk_test_51ObrIRJ9Hp1bA45SzY1bnC0qY0VrfwTxlewKudNtjlUuqUE8CqQMw53T0MjKQh87BBHWnRLV2iAsmrV8Q5Ij5S4h00YZOYyaiZ"
-
-from django.shortcuts import render, redirect, get_object_or_404
 
 
 def home(request):
@@ -70,16 +68,16 @@ def electrical_repair_service(request):
     return render(request, 'services-offered/electrical-repair.html', {})
 
 
-
-
-
 def how_it_works(request):
     return render(request, 'main/howitworks.html', {})
 
 
-
 def about(request):
     return render(request, 'main/about.html', {})
+
+
+def pricing(request):
+    return render(request, 'main/pricing.html', {})
 
 
 
@@ -87,14 +85,14 @@ def about(request):
 @login_required(login_url='/login')
 def user_home(request):
     # Retrieve data for the logged-in user
-    latest_event = Event.objects.filter(user=request.user).latest('id')
+
     business_data = BussinessCreationModel.objects.all()
     upcoming_maintenance_data = MostRecentMaintenance.objects.filter(owner=request.user)
     car_data = Car_Information.objects.filter(owner=request.user)
 
     context = {
         'data': car_data,
-        'data_2': latest_event,
+        'data_2': upcoming_maintenance_data,
         'data_3': business_data
     }
 
@@ -138,8 +136,12 @@ def sign_up(request):
             # Check for common password error
             if 'password2' in form.errors:
                 messages.error(request, "Passwords do not match. Please try again.")
-            elif 'password1' in form.errors and 'password1' in form.errors['password1']:
+            elif 'password1' in form.errors:
                 messages.error(request, "Password is too common. Choose a stronger password.")
+            elif 'username' in form.errors:
+                messages.error(request, "Username is already taken. Please choose another one.")
+            elif 'email' in form.errors:
+                messages.error(request, "Email is already taken. Please choose another one.")
             else:
                 print(form.errors)
 

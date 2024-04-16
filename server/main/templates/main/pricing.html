@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/main/css/howitworks.css">
-    <title>Instructions</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'main/css/pricing.css' %}">
+        <title>Memberships | Auto Care Hub</title>
+    </head>
 <body>
 
     <nav>
@@ -72,7 +73,7 @@
                 searchToggle.addEventListener("click" , () =>{
                 searchToggle.classList.toggle("active");
             });
- 
+    
       
                 //   js code to toggle sidebar
                 sidebarOpen.addEventListener("click" , () =>{
@@ -85,45 +86,74 @@
                 }
             });
     </script>
-
+    
+    
     <section class="header">
+    
         <div class="header-text">
-            <h1 class="header-title">How It Works</h1>
+            <h1 class="header-title">Memberships</h1>
         </div>
+    
     </section>
 
     <div class="div-01-layout">
         <div class="div-01-body">
-            <div class="top-div-01">
-                <h1>01</h1>
+
+            <div class="membership_01">
+                <div class="title-membership">
+                    <h1>Basic</h1>
+                    <img src="{% static 'main/IMG/pricing/cube.png' %}" alt="">
+                </div>
+
+                <div class="devider-membership"></div>
+
+                <div class="price-membership">
+                    <h1>$0</h1>
+                </div>
+
+                <div class="devider-membership"></div>
+
+                <div class="description-membership">
+                    <p>Basic membership is free and includes basic functionalities as well as access to the forum and the ability to post questions and comments.</p>
+                </div>
             </div>
 
-            <div class="bottom-div-01">
-                <p><span class="gawu">Get An Account With Us</span>, to create an account with us, click on the top menu where it says sign up, fill in the required information such as your username, e-mail, password and password confirmation. Once completed you should have a new account with us, allowing you to access our services and features.</p>
-            </div>
-        </div>
-    </div>
+            <div class="membership_02">
+                <div class="title-membership">
+                    <h1>Starter</h1>
+                    <img src="{% static 'main/IMG/pricing/electric.png' %}" alt="">
+                </div>
 
-    <div class="div-02-layout">
-        <div class="div-02-body">
-            <div class="top-div-02">
-                <h1>02</h1>
-            </div>
+                <div class="devider-membership"></div>
 
-            <div class="bottom-div-02">
-                <p><span class="gawu">Add Your Vehicle</span>, After signing up, you'll will be redirected to "Add My Vehicles" page to input details about your car, including make, model, year, and vin number. Right after, "Service History" section to record past maintenance or repairs, keeping a handy record within your account.</p>
-            </div>
-        </div>
-    </div>
+                <div class="price-membership">
+                    <h1>$10</h1>
+                </div>
 
-    <div class="div-03-layout">
-        <div class="div-03-body">
-            <div class="top-div-03">
-                <h1>03</h1>
+                <div class="devider-membership"></div>
+
+                <div class="description-membership">
+                    <p>Starter membership includes basic functionalities, access to real-time tracking, a personal algorythm for maintenance schedule, and more.</p>
+                </div>
             </div>
 
-            <div class="bottom-div-03">
-                <p><span class="gawu">Check out our Mechanic Marketplace</span>, Once you've added your vehicle, explore the "Search Mechanics" button to discover our own system of certified service providers. View their ratings and reviews to make an informed decision. Additionally, our app offer a "Schedule Service Here" option, allowing you to initiate the service process directly within the app for added convenience.  This feature streamlines the entire experience, from finding a mechanic to initiating the service, all within the confines of the application.</p>
+            <div class="membership_03">
+                <div class="title-membership">
+                    <h1>Pro</h1>
+                    <img src="{% static 'main/IMG/pricing/crown.png' %}" alt="">
+                </div>
+
+                <div class="devider-membership"></div>
+
+                <div class="price-membership">
+                    <h1>$20</h1>
+                </div>
+
+                <div class="devider-membership"></div>
+
+                <div class="description-membership">
+                    <p>Pro membership includes all functionalities, access to emergency services, roadside assistance, and the integration of our AI Wrench.</p>
+                </div>
             </div>
         </div>
     </div>
