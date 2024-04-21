@@ -430,3 +430,114 @@ body.dark .search-field i{
         margin: 20px 0px;
     }
 }
+
+.about-membership-basic {
+    width: 800px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+  
+.toggle-bar {
+    background-color: #8b2635;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+  
+.content {
+    display: none;
+}
+
+.content h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: #444;
+    margin: 20px;
+}
+
+.content p{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #444;
+    margin: 20px;
+}
+
+.about-membership-starter {
+    width: 800px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+  
+.toggle-bar-01 {
+    background-color: #8b2635;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+  
+.content-01 {
+    display: none;
+}
+
+.content-01 h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: #444;
+    margin: 20px;
+}
+
+.content-01 p{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #444;
+    margin: 20px;
+}
+
+.about-membership-pro {
+    width: 800px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+  
+.toggle-bar-02 {
+    background-color: #8b2635;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+  
+.content-02 {
+    display: none;
+}
+
+.content-02 h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: #444;
+    margin: 20px;
+}
+
+.content-02 p{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #444;
+    margin: 20px;
+}
